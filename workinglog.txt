@@ -1,0 +1,4418 @@
+ˇˇ
+UART1 func enable(gpio moto set fail) 
+
+Starting kernel ...
+
+Linux version 3.10.27 (zhangzhidan@XY-201) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2521) ) #29 PREEMPT Wed May 22 14:16:12 CST 2019
+prom cpufreq = 500000000
+prom memsize = 67108864
+hw_ver: 0x2, hw_rev: 0x1, isp_ver: 0x1
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+FPU revision is: 01730001
+Determined physical RAM map:
+ memory: 04000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x420000(0x1a00000)
+Zone ranges:
+  Normal   [mem 0x00000000-0x03ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x03ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock3 rts_hconf.hconf_mtd_idx=1 rts-quadspi.channels=dual mtdparts=m25p80:8192k@0(global),192k@0k(boot),1344k@192k(kernel),1792k@1536k(rootfs),3072k@3328k(userdata),1664k@6400k(rootfs_backup),64k@8064k(vd1),64k@8128k(conf)
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 34084k/65536k available (3338k kernel code, 31452k reserved, 580k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3. MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:57
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+Init(force reset registers
+rtsxb2 registered with IRQs
+INFO: initializing ISP memory ...
+INFO: initializing ISP device ...
+ISP camera platform devices added
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is ffffffff
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO:0initializing pinctrl device ...
+pinctrl_platform rts3903-pinctrl: rtspc registered with IRQs
+INFO: initializing ethernet devices ...
+INFO: initializing USB phy ...
+INFO: initializing watchdog controller ...
+INFO: initializing$crypto device ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts3903-dmac: DesignWare DMA Controller, 4 channels
+INFO: realtek DMA engine inited
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+msgmni has been set to 66
+NET: Registered protocol family 38
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+console [ttyS1] enabled, bootconsole disabled
+console [ttyS1] enabled, bootconsole disabled
+serial8250: ttyS1 at MMIO(0x18810100 (irq = 6) is a 16550A
+serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+dbg_iomem initialized!
+rts-quadspi rts3903-qspi: force to set channels from quad mode to dual mode
+rts-quadspi rts3903-qspi: request 60000000 Hz, force to set 41666666 Hz
+rts-quadspi rts3903-qspi: found w25q64fv, expected mx25l12835f
+rts-quadspi rts3903-qspi: w25q64fv (8192 Kbytes)
+8 cmdlinepart partitions found on MTD device m25p80
+Creating 8 MTD partitions on "m25p80":
+0x000000000000-0x000000800000 : "global"
+0x000000000000-0x000000030000 : "boot"
+0x000000030000-0x000000180000 : "kernel"
+0x000000180000-0x000000340000 : "rootfs"
+0x000000340000-0x000000640000 : "userdata"
+0x000000640000-0x0000007e0000 : "rootfs_backup"
+0x0000007e0000-0x0000007f0000 : "vd1"
+0x0000007f0000-0x000000800000 : "conf"
+rts-quadspi rts3903-qspi: Realtek QSPI Controller at 0x18030000 (irq 5)
+rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+rtl8168 rts3903-r8168 (unregistered net_device): Get invalid MAC address from flash!
+eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-rts: ehci-rts platform driver
+ehci-platform ehci-platform: EHCI Host Controller
+ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+ehci-platform ehci-platform: irq 11, io mem 0x18100000
+ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+usb usb1: SerialNumber: ehci-platform
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform ohci-platform: Generic Platform OHCI Controller
+ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+ohci-platform ohci-platform: irq 11, io mem 0x18180000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3- Product=2, SerialNumber=1
+usb usb2: Product: Generic Platform OHCI Controller
+usb usb2: Manufacturer: Linux 3.10.27 ohci_hcd
+usb usb2: SerialNumber: ohci-platform
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detgcted
+ERROR: Unable to read RTP_REG_DC4_TRIM_OFFSET reg
+ERROR: Unable to read RTP_REG_CHIP_VERSION reg
+rtp_mfd 0-0030: pre_init() failed: -140
+rtp_mfd: probe of 0-0030 failed with error -140
+Stopped watchdog timer
+timer margin: 8 sec
+nf_conntrack version 0.5.0 (532 buckets, 2128 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP: cubic registered
+NET: Registered protocol family 17
+Key type dns_resolver registered
+mtd1 name is boot
+hconf init failed
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+Freeing unused kernel memory: 176K (803e4000 - 80410000)
+usb 1-1: new high-speed USB device number 2 using ehci-platform
+usb 1-1: New USB device found, idVendor=0bda, idProduct=f179
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1: Product: 802.11n
+usb 1-1: Manufacturer: Realtek
+usb 1-1: SerialNumber: 1CBFCE3094A8
+Sat Oct 24 10:24:00 UTC 2015
+ _           _         _            
+| |         | |       | |           
+| |     ___ | |__  ___| |_ ___ _ __ 
+| |   "/ _ \| '_ \/ __| __/ _ \ '__|
+| |___| (_) | |_) \__ \ ||  __/ |   
+|______\___/|_.__/|___/\__\___|_|   
+                                    
+                                    
+ubusd: can't load library 'libblobmsg_json.so'
+jffs2: notice: (235) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+home_mount_fail=0
+try /home/app/init.sh
+
+Please press Enter to activate this console. [0;32;32mStart [0;32;31m/home/app/init.sh...[m
+rlx snd internal codec init
+soc-audio soc-audio.0.auto: ASoC: machyne RLX_INTERN_CARD should use snd_soc_register_card()
+soc-audio soc-audio.0.auto:  rlx-codec-digital <-> pcm-platform mapping ok
+soc-audio soc-audio.0.auto:  rlx-codec-analog <-> pcm-platform mapping ok
+usbcore: registered new interface driver rtl8188fu
+rtscam:isp resvd mem addr : 0x00520000, size : 0x1900000
+rtscam:rtscam_mem_init v:0xa0520000 p:0x00520000 s:0x00001900
+rtscam:rtscam_lock_init
+rtscam:rtscam_soc_probe
+rtscam:rtscam_hx280_probe
+rtscam:hx280enc:HW at base <0x18060000> with ID <0x48317011>
+rtscam:rtscam_jpgenc_probe
+rtscam:rtscam_osd2_probe
+rtscam:rtstream_init
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+mmc0: new ultra high speed SDR50 SDHC card at address 0007
+mmcblk0: mmc0:0007 SD32G 28.9 GiB 
+(mmcblk0: p1
+10-24 10:24:04.010 checkdisk.c:106|get_tfcard_size_v2() TF card total size : 29664 MB
+
+10-24 10:24:04.011 checkdisk.c:290|get_fs_type() FS TYPE : VFAT
+
+[1;33mget_cluster_size(349) sector_size:512,sect_per_cluster:32[m
+10-24 10:24:04.169 checkdisk.c:355|get_cluster_size() cluster_size = 16384 Bytes
+
+10-24 10:24:04.169 checkdisk.c:504|main() FS cluster size is too little. cluster_size = 16384 
+checkdisk, main() ret_status(10002) 
+10-24 10:24:04.170 checkdisk.c:531|main() Need update tf_status.stat,
+old stat : 10012, new stat : 10002
+10-24 10:24:04.170 checkdisk.c:538|main() Need update tf_status.cid,
+old cid : ,
+new cid : 275048534433324730011e3ee600f600
+
+32+0 records in
+32+0 records out
+32 bytes (32B) copied, 0.006685 seconds, 4.7KB/s
+high level enable
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+numid=8,iface=MIXER,name='Master Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=127,127
+0 | dBscale-min=-33.50dB,step=0.50dB,mute=0
+numid=1,iface=MIXER,name='Master Playback Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=109,109
+  | dBscale-min=-63.50dB,step=0.50dB,mute=0
+numid=11,iface=MIXER,name='Real Amic Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0.max=69,step=0
+  : values=30,30
+  | dBscale-min=-6.00dB,step=0.75dB,mute=0
+---update file(home_r10m) Not exist---
+./init.sh: line 124: mDNSRespoderPosix: not found
+./init.sh: line 129: can't create /proc/sys/vm/extfrag_threshold: nonexistent directory
+./init.sh: line 130: can't create /proc/sys/vm/compact_memory: nonexistent directory
+hw_ver[32]=[21121113000000000000000000000000] 
+gpio_pin[32]=[32003002110022000000000000000000] 
+hw  =[21121113000000000000000000000000] 
+gpio=[32003002110022000000000000000000] 
+[CPLD_PERIPH] CPLD_PERIPH module inited 
+moto not support !!! 
+Started watchdog timer
+Started watchdog timer
+hue, start_with_reset = 1 @get_config()->g_sysconf.ssid == 0 
+10-24 10:24:07.739 dispatch.c:374|send_saveconfig_msg() send_saveconfig_msg msg snd success
+10-24 10:24:07.740 dispatch.c:1283|get_config() get_config save conf
+
+10-24 10:24:07.740 dispatch.c:4575|main() hw_type(2)
+
+./p2p_tnp: fshare.fshare_open.sem_open(/fshare_read_lock): No such file or directory
+rtscam:begin to load fw from isp.fw
+10-24 10:24:07.958 p2p_tnp.c:2055|p2p_set_tnp_init_status() p2p_set_tnp_init_status 1 send_osg ok!
+
+
+[PID_LIST] pid_list_init ok, [ ver=May 27 2019, 16:21:04 ] 
+rtscam:Load firmware size : 131024.
+10-24 10:24:08.158 dispatch.c:501|choose_server() in choose_server, region_id = 1, api_server = https://plt-api.xiaoyi.com, snamrtscam:Found ISP 1.011 device
+e = RealPJ, dlproto = micn
+
+10-24 10:24:08.159 dispatch.c:501|choose_server() in choose_server, region_id = 1, api_server = https://plt-api.xiaoyi.com, sname = RealPJ, dlproto = micn
+
+10-24 10:24:08.160 dispatch.c:4732|main() init ok, cost time(512 ms)
+10-24 10:24:08.167 dispatch.c:962|save_config() got pwd()()
+10-24 10:24:08.167 dispatch.c:963|save_config() got ssid()()
+10-24 10:24:08.172 dispatch.c:964|save_config() config save finish 1
+/bin/sh: /home/base/tools/hosrtscam:video device <rts3903-isp> registered
+tapd.sh: not found
+[1;33mmain(5473) sys_init ok[m
+rtscam:rts3903-isp initialized
+rtscam:begin to load fw from isp.fw
+rtscam:Load firmware size : 131024.
+sensor = SC2230rtscam:begin to load fw from /home/lib/sc2230/isp_jin.fw
+
+===========
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+
+choose isp_jin.fw============
+rtl8168: eth0: link up
+16000 AECNS is free successfully 
+
+***** SMART BABYCRYING - V20160925.1 - *****
+  --- pmstat init_flt2ll[1] diff:119524 us, totalTm: 119524 us
+
+***** SMART BABYCRYING - V20160412.2 - *****
+ppmngr:0x5965b8, len:320000
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+raw_video_init 0
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x100r)
+
+
+[m
+   ∞¸[0;32;31mmsg_proc(1418)†
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+˛¯ˇ‡ ~Ëˇ‡¿¸¯Ñª˝ÄÄ ¸  °£UPU™LH≥]kRñ+K´ÈWÎ¢ÎãΩÅŒï—Å2Ö•±•Rj§‘hEÖ…—•πùÅ™ï…πï±ÅrrrRj§‘¯Linux version 3.10.27 (zhangzhidan@XY-201) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2521) ) #29 PREEMPT Wed May 22 14:16:12 CST 2019
+prom cpufreq = 500000000
+prom memsize = 67108864
+hw_ver: 0x2, hw_rev: 0x1, isp_ver: 0x1
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+FPU revision is: 01730001
+Determined physical RAM map:
+ memory: 04000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x420000(0x1a00000)
+Zone ranges:
+  Normal   [mem 0x00000000-0x03ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x03ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock3 rts_hconf.hconf_mtd_idx=1 rts-quadspi.channels=dual mtdparts=m25p80:8192k@0(global),192k@0k(boot),1344k@192k(kernel),1792k@1536k(rootfs),3072k@3328k(userdata),1664k@6400k(rootfs_backup),64k@8064k(vd1),64k@8128k(conf)
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 34084k/65536k available (3338k kernel code, 31452k reserved, 580k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:57
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+Init force reset registers
+rtsxb2 registered with IRQs
+INFO: initializing ISP memory ...
+INFO: initializing ISP device ...
+ISP camera platform devices added
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is ffffffff
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO: initializing pinctrl device ...
+pinctrl_platform rts3903-pinctrl: rtspc registered with IRQs
+INFO: initializing ethernet devices ...
+INFO: initializing USB phy ...
+INFO: initializing watchdog controller ...
+INFO: initializing crypto device ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts3903-dmac: DesignWare DMA Controller, 4 channels
+INFO: realtek DMA engine inited
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+msgmni has been set to 66
+NET: Registered protocol family 38
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+console [ttyS1] enabled, bootconsole disabled
+console [ttyS1] enabled, bootconsole disabled
+serial8250: ttyS1 at MMIO 0x18810100 (irq = 6) is a 16550A
+serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+dbg_iomem initialized!
+rts-quadspi rts3903-qspi: force to set channels from quad mode to dual mode
+rts-quadspi rts3903-qspi: request 60000000 Hz, force to set 41666666 Hz
+rts-quadspi rts3903-qspi: found w25q64fv, expected mx25l12835f
+rts-quadspi rts3903-qspi: w25q64fv (8192 Kbytes)
+8 cmdlinepart partitions found on MTD device m25p80
+Creating 8 MTD partitions on "m25p80":
+0x000000000000-0x000000800000 : "global"
+0x000000000000-0x000000030000 : "boot"
+0x000000030000-0x000000180000 : "kernel"
+0x000000180000-0x000000340000 : "rootfs"
+0x000000340000-0x000000640000 : "userdata"
+0x000000640000-0x0000007e0000 : "rootfs_backup"
+0x0000007e0000-0x0000007f0000 : "vd1"
+0x0000007f0000-0x000000800000 : "conf"
+rts-quadspi rts3903-qspi: Realtek QSPI Controller at 0x18030000 (irq 5)
+rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+rtl8168 rts3903-r8168 (unregistered net_device): Get invalid MAC address from flash!
+eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-rts: ehci-rts platform driver
+ehci-platform ehci-platform: EHCI Host Controller
+ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+ehci-platform ehci-platform: irq 11, io mem 0x18100000
+ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+usb usb1: SerialNumber: ehci-platform
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform ohci-platform: Generic Platform OHCI Controller
+ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+ohci-platform ohci-platform: irq 11, io mem 0x18180000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: Generic Platform OHCI Controller
+usb usb2: Manufacturer: Linux 3.10.27 ohci_hcd
+usb usb2: SerialNumber: ohci-platform
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ERROR: Unable to read RTP_REG_DC4_TRIM_OFFSET reg
+ERROR: Unable to read RTP_REG_CHIP_VERSION reg
+rtp_mfd 0-0030: pre_init() failed: -140
+rtp_mfd: probe of 0-0030 failed with error -140
+Stopped watchdog timer
+timer margin: 8 sec
+nf_conntrack version 0.5.0 (532 buckets, 2128 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP: cubic registered
+NET: Registered protocol family 17
+Key type dns_resolver registered
+mtd1 name is boot
+hconf init failed
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+Freeing unused kernel memory: 176K (803e4000 - 80410000)
+usb 1-1: new high-speed USB device number 2 using ehci-platform
+usb 1-1: New USB device found, idVendor=0bda, idProduct=f179
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1: Product: 802.11n
+usb 1-1: Manufacturer: Realtek
+usb 1-1: SerialNumber: 1CBFCE3094A8
+Sat Oct 24 10:24:00 UTC 2015
+ _           _         _            
+| |         | |       | |           
+| |     ___ | |__  ___| |_ ___ _ __ 
+| |    / _ \| '_ \/ __| __/ _ \ '__|
+| |___| (_) | |_) \__ \ ||  __/ |   
+|______\___/|_.__/|___/\__\___|_|   
+                                    
+                                    
+ubusd: can't load library 'libblobmsg_json.so'
+jffs2: notice: (235) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+home_mount_fail=0
+try /home/app/init.sh
+
+Please press Enter to activate this console. [0;32;32mStart [0;32;31m/home/app/init.sh...[m
+rlx snd internal codec init
+soc-audio soc-audio.0.auto: ASoC: machine RLX_INTERN_CARD should use snd_soc_register_card()
+soc-audio soc-audio.0.auto:  rlx-codec-digital <-> pcm-platform mapping ok
+soc-audio soc-audio.0.auto:  rlx-codec-analog <-> pcm-platform mapping ok
+usbcore: registered new interface driver rtl8188fu
+rtscam:isp resvd mem addr : 0x00520000, size : 0x1900000
+rtscam:rtscam_mem_init v:0xa0520000 p:0x00520000 s:0x00001900
+rtscam:rtscam_lock_init
+rtscam:rtscam_soc_probe
+rtscam:rtscam_hx280_probe
+rtscam:hx280enc:HW at base <0x18060000> with ID <0x48317011>
+rtscam:rtscam_jpgenc_probe
+rtscam:rtscam_osd2_probe
+rtscam:rtstream_init
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+mmc0: new ultra high speed SDR50 SDHC card at address 0007
+mmcblk0: mmc0:0007 SD32G 28.9 GiB 
+ mmcblk0: p1
+10-24 10:24:04.011 checkdisk.c:106|get_tfcard_size_v2() TF card total size : 29664 MB
+
+10-24 10:24:04.013 checkdisk.c:290|get_fs_type() FS TYPE : VFAT
+
+[1;33mget_cluster_size(349) sector_size:512,sect_per_cluster:32[m
+10-24 10:24:04.035 checkdisk.c:355|get_cluster_size() cluster_size = 16384 Bytes
+
+10-24 10:24:04.035 checkdisk.c:504|main() FS cluster size is too little. cluster_size = 16384 
+checkdisk, main() ret_status(10002) 
+32+0 records in
+32+0 records out
+32 bytes (32B) copied, 0.007708 seconds, 4.1KB/s
+high level enable
+numid=8,iface=MIXER,name='Master Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=127,127
+  | dBscale-min=-33.50dB,step=0.50dB,mute=0
+numid=1,iface=MIXER,name='Master Playback Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=109,109
+  | dBscale-min=-63.50dB,step=0.50dB,mute=0
+numid=11,iface=MIXER,name='Real Amic Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=69,step=0
+  : values=30,30
+  | dBscale-min=-6.00dB,step=0.75dB,mute=0
+---update file(home_r10m) Not exist---
+./init.sh: line 124: mDNSRespoderPosix: not found
+./init.sh: line 129: can't create /proc/sys/vm/extfrag_threshold: nonexistent directory
+./init.sh: line 130: can't create /proc/sys/vm/compact_memory: nonexistent directory
+hw_ver[32]=[21121113000000000000000000000000] 
+gpio_pin[32]=[32003002110022000000000000000000] 
+hw  =[21121113000000000000000000000000] 
+gpio=[32003002110022000000000000000000] 
+[CPLD_PERIPH] CPLD_PERIPH module inited 
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+moto not support !!! 
+Started watchdog timer
+Started watchdog timer
+
+[PID_LIST] pid_list_init ok, [ ver=May 27 2019, 16:21:04 ] 
+hue, start_with_reset = 1 @get_config()->g_sysconf.ssid == 0 
+10-24 10:24:07.287 dispatch.c:1283|get_config() get_config save crtscam:begin to load fw from isp.fw
+onf
+
+10-24 10:24:07.287 dispatch.c:4575|main() hw_type(2)
+
+10-24 10:24:07.447 p2p_tnp.c:6741|main() fshare_open ok
+10-24 10:24:07.452 p2p_tnp.c:2055|p2p_set_tnp_init_status() p2p_set_tnp_init_status 1 send_msg ok!
+
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+[1;33mmain(5473) sys_init ok[m
+/bin/sh: /home/base/tools/hostapd.sh: nrtscam:begin to load fw from isp.fw
+ot found
+rtscam:Load firmware size : 131024.
+sensor = SC2230rtscam:begin to load fw from /home/lib/sc2230/isp_jin.fw
+
+===========
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+
+choose isp_jin.fw============
+rtl8168: eth0: link up
+16000 AECNS is free successfully 
+
+***** SMART BABYCRYING - V20160905.1 - *****
+  --- pmstat init_flt2ll[1] diff:108507 us, totalTm: 108507 us
+
+***** SMART BABYCRYING - V20160412.2 - *****
+ppmngr:0x5965b8, len:320000
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+raw_video_init 0
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+~ # 
+~ # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+~ # cp
+~ # cd /
+~ # ls -la
+drwxrwxr-x   17 1004     1004           215 Sep 27  2019 .
+drwxrwxr-x   17 1004     1004           215 Sep 27  2019 ..
+drwxr-xr-x    5 root     root             0 Jan  1  1970 backup
+drwxrwxr-x    2 1004     1004          1283 Sep 27  2019 bin
+drwxr-xr-x    6 root     root             0 Apr 19 11:54 dev
+drwxrwxr-x    7 1004     1004           321 Sep 27  2019 etc
+drwxrwxr-x    6 1004     1004            91 Sep 27  2019 home
+lrwxrwxrwx    1 1004     1004             8 Sep 27  2019 init -> bin/init
+drwxrwxr-x    4 1004     1004           944 Sep 27  2019 lib
+drwxr-xr-x    2 root     root            40 Oct 24  2015 media
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 mnt
+drwxrwxr-x    2 1004     1004            44 Sep 27  2019 overlay
+dr-xr-xr-x   53 root     root             0 Jan  1  1970 proc
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 rom
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 root
+dr-xr-xr-x   11 root     root             0 Jan  1  1970 sys
+lrwxrwxrwx    1 1004     1004             8 Sep 27  2019 tmp -> /var/tmp
+drwxrwxr-x    4 1004     1004            40 Sep 27  2019 usr
+drwxr-xr-x    7 root     root             0 Jan  1  1970 var
+~ # cd [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+tmn[Jp
+/var/tmp # ls -la
+drwxr-xr-x    3 root     root             0 Oct 24  2015 .
+drwxr-xr-x    7 root     root             0 Jan  1  1970 ..
+lrwxrwxrwx    1 root     root            23 Oct 24  2015 audio -> /home/app/audio_file/us
+srwxr-xr-x    1 root     root             0 Oct 24  2015 logsock
+-rwxr-xr-x    1 root     root          2720 Oct 24  2015 mmap.info
+drwxr-xr-x    2 root     root             0 Oct 24  2015 sd
+/var/tmp # cd sd
+/var/tmp/sd # ls -la
+drwxr-xr-x    2 root     root             0 Oct 24  2015 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+-rw-r--r--    1 root     root          5281 Apr 19 11:56 log.txt
+-rw-r--r--    1 root     root           126 Apr 19 11:54 log_oss.txt
+/var/tmp/sd # touch a
+/var/tmp/sd # ls -la
+drwxr-xr-x    2 root     root             0 Apr 19 11:56 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+-rw-r--r--    1 root     root             0 Apr 19 11:56 a
+-rw-r--r--    1 root     root          5281 Apr 19 11:56 log.txt
+-rw-r--r--    1 root     root           126 Apr 19 11:54 log_oss.txt
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+/var/tmp/sd # df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+rootfs                    1664      1664         0 100% /
+/dev/root                 1664      1664         0 100% /
+tmpfs                    17128        76     17052   0% /dev/shm
+tmpfs                       64         0        64   0% /media
+/dev/mtdblock5            1664      1224       440  74% /backup
+/dev/mtdblock4            2560      2560         0 100% /home
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+rootfs                    1664      1664         0 100% /
+/dev/root                 1664      1664         0 100% /
+tmpfs                    17128        76     17052   0% /dev/shm
+tmpfs                       64         0        64   0% /media
+/dev/mtdblock5            1664      1224       440  74% /backup
+/dev/mtdblock4            2560      2560         0 100% /home
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+ls [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+fdisk [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+-l
+ls: fdisk: No such file or directory
+/var/tmp/sd # di[J[Jfdisk
+/var/tmp/sd # /var/tmp/sd # fdisk[J -l
+
+Disk /dev/mtdblock0: 8 MB, 8388608 bytes
+255 heads, 63 sectors/track, 1 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock0 doesn't contain a valid partition table
+
+Disk /dev/mtdblock1: 0 MB, 196608 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock1 doesn't contain a valid partition table
+
+Disk /dev/mtdblock2: 1 MB, 1376256 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock2 doesn't contain a valid partition table
+
+Disk /dev/mtdblock3: 1 MB, 1835008 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock3 doesn't contain a valid partition table
+
+Disk /dev/mtdblock4: 3 MB, 3145728 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock4 doesn't contain a valid partition table
+
+Disk /dev/mtdblock5: 1 MB, 1703936 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock5 doesn't contain a valid partition table
+
+Disk /dev/mtdblock6: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock6 doesn't contain a valid partition table
+
+Disk /dev/mtdblock7: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock7 doesn't contain a valid partition table
+
+Disk /dev/mmcblk0: 31.1 GB, 31104958464 bytes
+255 heads, 63 sectors/track, 3781 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1               1        3782    30373888   c Win95 FAT32 (LBA)
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+/var/tmp/sd # df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+rootfs                    1664      1664         0 100% /
+/dev/root                 1664      1664         0 100% /
+tmpfs                    17128        76     17052   0% /dev/shm
+tmpfs                       64         0        64   0% /media
+/dev/mtdblock5            1664      1224       440  74% /backup
+/dev/mtdblock4            2560      2560         0 100% /home
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+/home/base/tools/checkdisk
+[1;33mget_cluster_size(349) sector_size:512,sect_per_cluster:32[m
+checkdisk, main() ret_status(10002) 
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+cd /tmp/sd
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+ls -la
+drwxr-xr-x    2 root     root             0 Apr 19 11:56 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+-rw-r--r--    1 root     root             0 Apr 19 11:56 a
+-rw-r--r--    1 root     root         11522 Apr 19 11:59 log.txt
+-rw-r--r--    1 root     root           126 Apr 19 11:54 log_oss.txt
+/var/tmp/sd # df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+rootfs                    1664      1664         0 100% /
+/dev/root                 1664      1664         0 100% /
+tmpfs                    17128        76     17052   0% /dev/shm
+tmpfs                       64         0        64   0% /media
+/dev/mtdblock5            1664      1224       440  74% /backup
+/dev/mtdblock4            2560      2560         0 100% /home
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+/var/tmp/sd # killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+fidsk
+-/bin/sh: fidsk: not found
+/var/tmp/sd # fdisk
+/var/tmp/sd # /var/tmp/sd # fdisk[J -l
+
+Disk /dev/mtdblock0: 8 MB, 8388608 bytes
+255 heads, 63 sectors/track, 1 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock0 doesn't contain a valid partition table
+
+Disk /dev/mtdblock1: 0 MB, 196608 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock1 doesn't contain a valid partition table
+
+Disk /dev/mtdblock2: 1 MB, 1376256 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock2 doesn't contain a valid partition table
+
+Disk /dev/mtdblock3: 1 MB, 1835008 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock3 doesn't contain a valid partition table
+
+Disk /dev/mtdblock4: 3 MB, 3145728 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock4 doesn't contain a valid partition table
+
+Disk /dev/mtdblock5: 1 MB, 1703936 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock5 doesn't contain a valid partition table
+
+Disk /dev/mtdblock6: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock6 doesn't contain a valid partition table
+
+Disk /dev/mtdblock7: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock7 doesn't contain a valid partition table
+
+Disk /dev/mmcblk0: 31.1 GB, 31104958464 bytes
+255 heads, 63 sectors/track, 3781 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1               1        3782    30373888   c Win95 FAT32 (LBA)
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+fdiask[J[J[Jsk
+/var/tmp/sd # /var/tmp/sd # fdisk[J -,
+fdisk: invalid option -- ,
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+/var/tmp/sd # fdisk -,[J[Jl
+
+Disk /dev/mtdblock0: 8 MB, 8388608 bytes
+255 heads, 63 sectors/track, 1 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock0 doesn't contain a valid partition table
+
+Disk /dev/mtdblock1: 0 MB, 196608 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock1 doesn't contain a valid partition table
+
+Disk /dev/mtdblock2: 1 MB, 1376256 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock2 doesn't contain a valid partition table
+
+Disk /dev/mtdblock3: 1 MB, 1835008 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock3 doesn't contain a valid partition table
+
+Disk /dev/mtdblock4: 3 MB, 3145728 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock4 doesn't contain a valid partition table
+
+Disk /dev/mtdblock5: 1 MB, 1703936 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock5 doesn't contain a valid partition table
+
+Disk /dev/mtdblock6: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock6 doesn't contain a valid partition table
+
+Disk /dev/mtdblock7: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock7 doesn't contain a valid partition table
+
+Disk /dev/mmcblk0: 31.1 GB, 31104958464 bytes
+255 heads, 63 sectors/track, 3781 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1               1        3782    30373888   c Win95 FAT32 (LBA)
+/var/tmp/sd # df -H
+df: invalid option -- H
+/var/tmp/sd # /var/tmp/sd # df -H[J[J[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+/var/tmp/sd # fdisk -l[J
+
+Disk /dev/mtdblock0: 8 MB, 8388608 bytes
+255 heads, 63 sectors/track, 1 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock0 doesn't contain a valid partition table
+
+Disk /dev/mtdblock1: 0 MB, 196608 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock1 doesn't contain a valid partition table
+
+Disk /dev/mtdblock2: 1 MB, 1376256 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock2 doesn't contain a valid partition table
+
+Disk /dev/mtdblock3: 1 MB, 1835008 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock3 doesn't contain a valid partition table
+
+Disk /dev/mtdblock4: 3 MB, 3145728 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock4 doesn't contain a valid partition table
+
+Disk /dev/mtdblock5: 1 MB, 1703936 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock5 doesn't contain a valid partition table
+
+Disk /dev/mtdblock6: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock6 doesn't contain a valid partition table
+
+Disk /dev/mtdblock7: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock7 doesn't contain a valid partition table
+
+Disk /dev/mmcblk0: 31.1 GB, 31104958464 bytes
+255 heads, 63 sectors/track, 3781 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1               1        3782    30373888   c Win95 FAT32 (LBA)
+/var/tmp/sd # df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+rootfs                    1664      1664         0 100% /
+/dev/root                 1664      1664         0 100% /
+tmpfs                    17128        76     17052   0% /dev/shm
+tmpfs                       64         0        64   0% /media
+/dev/mtdblock5            1664      1224       440  74% /backup
+/dev/mtdblock4            2560      2560         0 100% /home
+/var/tmp/sd # df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+rootfs                    1664      1664         0 100% /
+/dev/root                 1664      1664         0 100% /
+tmpfs                    17128        76     17052   0% /dev/shm
+tmpfs                       64         0        64   0% /media
+/dev/mtdblock5            1664      1224       440  74% /backup
+/dev/mtdblock4            2560      2560         0 100% /home
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+/var/tmp/sd # mikdir fs
+-/bin/sh: mikdir: not found
+/var/tmp/sd # mkdir fs
+/var/tmp/sd # ls -la
+drwxr-xr-x    3 root     root             0 Apr 19 12:04 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+-rw-r--r--    1 root     root             0 Apr 19 11:56 a
+drwxr-xr-x    2 root     root             0 Apr 19 12:04 fs
+-rw-r--r--    1 root     root         19583 Apr 19 12:04 log.txt
+-rw-r--r--    1 root     root           126 Apr 19 11:54 log_oss.txt
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+cd fs
+/var/tmp/sd/fs # ls -la
+drwxr-xr-x    2 root     root             0 Apr 19 12:04 .
+drwxr-xr-x    3 root     root             0 Apr 19 12:04 ..
+/var/tmp/sd/fs # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+cd /
+~ # ls -la
+drwxrwxr-x   17 1004     1004           215 Sep 27  2019 .
+drwxrwxr-x   17 1004     1004           215 Sep 27  2019 ..
+drwxr-xr-x    5 root     root             0 Jan  1  1970 backup
+drwxrwxr-x    2 1004     1004          1283 Sep 27  2019 bin
+drwxr-xr-x    6 root     root             0 Apr 19 11:54 dev
+drwxrwxr-x    7 1004     1004           321 Sep 27  2019 etc
+drwxrwxr-x    6 1004     1004            91 Sep 27  2019 home
+lrwxrwxrwx    1 1004     1004             8 Sep 27  2019 init -> bin/init
+drwxrwxr-x    4 1004     1004           944 Sep 27  2019 lib
+drwxr-xr-x    2 root     root            40 Oct 24  2015 media
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 mnt
+drwxrwxr-x    2 1004     1004            44 Sep 27  2019 overlay
+dr-xr-xr-x   51 root     root             0 Jan  1  1970 proc
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 rom
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 root
+dr-xr-xr-x   11 root     root             0 Jan  1  1970 sys
+lrwxrwxrwx    1 1004     1004             8 Sep 27  2019 tmp -> /var/tmp
+drwxrwxr-x    4 1004     1004            40 Sep 27  2019 usr
+drwxr-xr-x    7 root     root             0 Jan  1  1970 var
+~ # cp -R * killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+/tmp/sd/fs
+^C
+~ # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+cd /tmp/sd/fs
+/var/tmp/sd/fs # ls-[J -la
+drwxr-xr-x    8 root     root             0 Apr 19 12:05 .
+drwxr-xr-x    3 root     root             0 Apr 19 12:04 ..
+drwxr-xr-x    4 root     root             0 Apr 19 12:05 backup
+drwxr-xr-x    2 root     root             0 Apr 19 12:05 bin
+drwxr-xr-x    6 root     root             0 Apr 19 12:05 dev
+drwxr-xr-x    7 root     root             0 Apr 19 12:05 etc
+drwxr-xr-x    6 root     root             0 Apr 19 12:05 home
+lrwxrwxrwx    1 root     root             8 Apr 19 12:05 init -> bin/init
+drwxr-xr-x    3 root     root             0 Apr 19 12:05 lib
+/var/tmp/sd/fs # /var/tmp/sd/fs # ls -la[J/var/tmp/sd/fs # cd /tmp/sd/fs[J/var/tmp/sd/fs # cp -R * /tmp/sd/fs[J/* /tmp/sd/fs[12D[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+* /tmp/sd/fs
+^C
+/var/tmp/sd/fs # 
+/var/tmp/sd/fs # 
+/var/tmp/sd/fs # ls -la
+
+drwxr-xr-x    8 root     root             0 Apr 19 12:05 .
+drwxr-xr-x    3 root     root             0 Apr 19 12:04 ..
+drwxr-xr-x    4 root     root             0 Apr 19 12:05 backup
+drwxr-xr-x    2 root     root             0 Apr 19 12:05 bin
+drwxr-xr-x    6 root     root             0 Apr 19 12:05 dev
+drwxr-xr-x    7 root     root             0 Apr 19 12:05 etc
+drwxr-xr-x    6 root     root             0 Apr 19 12:05 home
+lrwxrwxrwx    1 root     root             8 Apr 19 12:05 init -> bin/init
+drwxr-xr-x    3 root     root             0 Apr 19 12:05 lib
+^C
+/var/tmp/sd/fs # rm -R *
+/var/tmp/sd/fs # /var/tmp/sd/fs # rm -R *[J/var/tmp/sd/fs # ls -la[J/var/tmp/sd/fs # cp -R /* /tmp/sd/fs[J[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+oss invoked oom-killer: gfp_mask=0x201da, order=0, oom_score_adj=0
+CPU: 0 PID: 467 Comm: oss Tainted: G           O 3.10.27 #29
+Stack : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	  00000000 00000000 00000000 00000000 00000000 00000000 00000000 828ffb00
+	  ...
+Call Trace:[<80018a1c>] 0x80018a1c
+[<80018a1c>] 0x80018a1c
+[<8034c8c8>] 0x8034c8c8
+[<80077ca4>] 0x80077ca4
+[<801634c8>] 0x801634c8
+[<8006d714>] 0x8006d714
+[<8002df78>] 0x8002df78
+[<80079c8c>] 0x80079c8c
+[<8006d534>] 0x8006d534
+[<8006dfa8>] 0x8006dfa8
+[<800715e8>] 0x800715e8
+[<8006c764>] 0x8006c764
+[<8006734c>] 0x8006734c
+[<80083e04>] 0x80083e04
+[<80086774>] 0x80086774
+[<8004db38>] 0x8004db38
+[<800873bc>] 0x800873bc
+[<8001cd98>] 0x8001cd98
+[<8034fc48>] 0x8034fc48
+[<800467a0>] 0x800467a0
+[<80045d98>] 0x80045d98
+[<800341ec>] 0x800341ec
+[<80015464>] 0x80015464
+
+Mem-Info:
+Normal per-cpu:
+CPU    0: hi:    6, btch:   1 usd:   3
+active_anon:1154 inactive_anon:0 isolated_anon:0
+ active_file:18 inactive_file:18 isolated_file:0
+ unevictable:3830 dirty:0 writeback:0 unstable:0
+ free:512 slab_reclaimable:272 slab_unreclaimable:1301
+ mapped:2 shmem:19 pagetables:62 bounce:0
+ free_cma:0
+Normal free:2048kB min:2048kB low:2560kB high:3072kB active_anon:4616kB inactive_anon:0kB active_file:72kB inactive_file:72kB unevictable:15320kB isolated(anon):0kB isolated(file):0kB present:65536kB managed:34088kB mlocked:0kB dirty:0kB writeback:0kB mapped:8kB shmem:76kB slab_reclaimable:1088kB slab_unreclaimable:5204kB kernel_stack:496kB pagetables:248kB unstable:0kB bounce:0kB free_cma:0kB writeback_tmp:0kB pages_scanned:9896 all_unreclaimable? yes
+lowmem_reserve[]: 0 0
+Normal: 0*4kB 0*8kB 0*16kB 0*32kB 0*64kB 0*128kB 0*256kB 0*512kB 0*1024kB 1*2048kB (R) 0*4096kB = 2048kB
+3885 total pagecache pages
+16384 pages RAM
+7819 pages reserved
+262148 pages shared
+7936 pages non-shared
+[ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+[  230]     0   230      357       17       3        0             0 syslogd
+[  232]     0   232      355       15       3        0             0 klogd
+[  239]     0   239      358       21       3        0             0 sh
+[  444]     0   444      193       19       3        0             0 log_server
+[  463]     0   463     2877       61       6        0             0 dispatch
+[  464]     0   464      319       28       3        0             0 cloud
+[  465]     0   465     1374       37       3        0             0 p2p_tnp
+[  466]     0   466      276       17       3        0             0 mp4record
+[  467]     0   467     1679       55       4        0             0 oss
+[  468]     0   468    12374      782      15        0             0 rmm
+[  469]     0   469      271       21       3        0             0 watch_process
+[  471]     0   471      355       14       4        0             0 watchdog
+[  852]     0   852      268       17       3        0             0 arp_test
+[ 2192]     0  2192      362       22       3        0             0 cp
+Out of memory: Kill process 468 (rmm) score 65 or sacrifice child
+Killed process 468 (rmm) total-vm:49496kB, anon-rss:3124kB, file-rss:4kB
+rmm: page allocation failure: order:0, mode:0x2005a
+CPU: 0 PID: 468 Comm: rmm Tainted: G           O 3.10.27 #29
+Stack : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	  00000000 00000000 00000000 00000000 00000000 00000000 °CUPi™LH≥]kRñ+K´ÈWÎRÎãÁ“WíVT-+	í®H®hWñ.WÀÎ“´Kó´………I®H®¯Linux version 3.10.27 (zhangzhidan@XY-201) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2521) ) #29 PREEMPT Wed May 22 14:16:12 CST 2019
+prom cpufreq = 500000000
+prom memsize = 67108864
+hw_ver: 0x2, hw_rev: 0x1, isp_ver: 0x1
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+FPU revision is: 01730001
+Determined physical RAM map:
+ memory: 04000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x420000(0x1a00000)
+Zone ranges:
+  Normal   [mem 0x00000000-0x03ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x03ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock3 rts_hconf.hconf_mtd_idx=1 rts-quadspi.channels=dual mtdparts=m25p80:8192k@0(global),192k@0k(boot),1344k@192k(kernel),1792k@1536k(rootfs),3072k@3328k(userdata),1664k@6400k(rootfs_backup),64k@8064k(vd1),64k@8128k(conf)
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 34084k/65536k available (3338k kernel code, 31452k reserved, 580k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:57
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+Init force reset registers
+rtsxb2 registered with IRQs
+INFO: initializing ISP memory ...
+INFO: initializing ISP device ...
+ISP camera platform devices added
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is ffffffff
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO: initializing pinctrl device ...
+pinctrl_platform rts3903-pinctrl: rtspc registered with IRQs
+INFO: initializing ethernet devices ...
+INFO: initializing USB phy ...
+INFO: initializing watchdog controller ...
+INFO: initializing crypto device ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts3903-dmac: DesignWare DMA Controller, 4 channels
+INFO: realtek DMA engine inited
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+msgmni has been set to 66
+NET: Registered protocol family 38
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+console [ttyS1] enabled, bootconsole disabled
+console [ttyS1] enabled, bootconsole disabled
+serial8250: ttyS1 at MMIO 0x18810100 (irq = 6) is a 16550A
+serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+dbg_iomem initialized!
+rts-quadspi rts3903-qspi: force to set channels from quad mode to dual mode
+rts-quadspi rts3903-qspi: request 60000000 Hz, force to set 41666666 Hz
+rts-quadspi rts3903-qspi: found w25q64fv, expected mx25l12835f
+rts-quadspi rts3903-qspi: w25q64fv (8192 Kbytes)
+8 cmdlinepart partitions found on MTD device m25p80
+Creating 8 MTD partitions on "m25p80":
+0x000000000000-0x000000800000 : "global"
+0x000000000000-0x000000030000 : "boot"
+0x000000030000-0x000000180000 : "kernel"
+0x000000180000-0x000000340000 : "rootfs"
+0x000000340000-0x000000640000 : "userdata"
+0x000000640000-0x0000007e0000 : "rootfs_backup"
+0x0000007e0000-0x0000007f0000 : "vd1"
+0x0000007f0000-0x000000800000 : "conf"
+rts-quadspi rts3903-qspi: Realtek QSPI Controller at 0x18030000 (irq 5)
+rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+rtl8168 rts3903-r8168 (unregistered net_device): Get invalid MAC address from flash!
+eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-rts: ehci-rts platform driver
+ehci-platform ehci-platform: EHCI Host Controller
+ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+ehci-platform ehci-platform: irq 11, io mem 0x18100000
+ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+usb usb1: SerialNumber: ehci-platform
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform ohci-platform: Generic Platform OHCI Controller
+ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+ohci-platform ohci-platform: irq 11, io mem 0x18180000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: Generic Platform OHCI Controller
+usb usb2: Manufacturer: Linux 3.10.27 ohci_hcd
+usb usb2: SerialNumber: ohci-platform
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ERROR: Unable to read RTP_REG_DC4_TRIM_OFFSET reg
+ERROR: Unable to read RTP_REG_CHIP_VERSION reg
+rtp_mfd 0-0030: pre_init() failed: -140
+rtp_mfd: probe of 0-0030 failed with error -140
+Stopped watchdog timer
+timer margin: 8 sec
+nf_conntrack version 0.5.0 (532 buckets, 2128 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP: cubic registered
+NET: Registered protocol family 17
+Key type dns_resolver registered
+mtd1 name is boot
+hconf init failed
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+Freeing unused kernel memory: 176K (803e4000 - 80410000)
+usb 1-1: new high-speed USB device number 2 using ehci-platform
+usb 1-1: New USB device found, idVendor=0bda, idProduct=f179
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1: Product: 802.11n
+usb 1-1: Manufacturer: Realtek
+usb 1-1: SerialNumber: 1CBFCE3094A8
+Sat Oct 24 10:24:00 UTC 2015
+ _           _         _            
+| |         | |       | |           
+| |     ___ | |__  ___| |_ ___ _ __ 
+| |    / _ \| '_ \/ __| __/ _ \ '__|
+| |___| (_) | |_) \__ \ ||  __/ |   
+|______\___/|_.__/|___/\__\___|_|   
+                                    
+                                    
+ubusd: can't load library 'libblobmsg_json.so'
+jffs2: notice: (235) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+home_mount_fail=0
+try /home/app/init.sh
+
+Please press Enter to activate this console. [0;32;32mStart [0;32;31m/home/app/init.sh...[m
+rlx snd internal codec init
+soc-audio soc-audio.0.auto: ASoC: machine RLX_INTERN_CARD should use snd_soc_register_card()
+soc-audio soc-audio.0.auto:  rlx-codec-digital <-> pcm-platform mapping ok
+soc-audio soc-audio.0.auto:  rlx-codec-analog <-> pcm-platform mapping ok
+usbcore: registered new interface driver rtl8188fu
+mmc0: new high speed SDHC card at address 0007
+mmcblk0: mmc0:0007 SD32G 28.9 GiB 
+ mmcblk0: p1
+rtscam:isp resvd mem addr : 0x00520000, size : 0x1900000
+rtscam:rtscam_mem_init v:0xa0520000 p:0x00520000 s:0x00001900
+rtscam:rtscam_lock_init
+rtscam:rtscam_soc_probe
+rtscam:rtscam_hx280_probe
+rtscam:hx280enc:HW at base <0x18060000> with ID <0x48317011>
+rtscam:rtscam_jpgenc_probe
+rtscam:rtscam_osd2_probe
+rtscam:rtstream_init
+10-24 10:24:03.637 checkdisk.c:106|get_tfcard_size_v2() TF card total size : 29664 MB
+
+10-24 10:24:03.639 checkdisk.c:290|get_fs_type() FS TYPE : VFAT
+
+[1;33mget_cluster_size(349) sector_size:512,sect_per_cluster:32[m
+10-24 10:24:03.651 checkdisk.c:355|get_cluster_size() cluster_size = 16384 Bytes
+
+10-24 10:24:03.652 checkdisk.c:504|main() FS cluster size is too little. cluster_size = 16384 
+checkdisk, main() ret_status(10002) 
+32+0 records in
+32+0 records out
+32 bytes (32B) copied, 0.005141 seconds, 6.1KB/s
+high level enable
+numid=8,iface=MIXER,name='Master Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=127,127
+  | dBscale-min=-33.50dB,step=0.50dB,mute=0
+numid=1,iface=MIXER,name='Master Playback Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=109,109
+  | dBscale-min=-63.50dB,step=0.50dB,mute=0
+numid=11,iface=MIXER,name='Real Amic Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=69,step=0
+  : values=30,30
+  | dBscale-min=-6.00dB,step=0.75dB,mute=0
+---update file(home_r10m) Not exist---
+./init.sh: line 124: mDNSRespoderPosix: not found
+./init.sh: line 129: can't create /proc/sys/vm/extfrag_threshold: nonexistent directory
+./init.sh: line 130: can't create /proc/sys/vm/compact_memory: nonexistent directory
+hw_ver[32]=[21121113000000000000000000000000] 
+gpio_pin[32]=[32003002110022000000000000000000] 
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+hw  =[21121113000000000000000000000000] 
+gpio=[32003002110022000000000000000000] 
+[CPLD_PERIPH] CPLD_PERIPH module inited 
+moto not support !!! 
+Started watchdog timer
+Started watchdog timer
+hue, start_with_reset = 1 @get_config()->g_sysconf.ssid == 0 
+10-24 10:24:07.178 dispatch.c:1283|get_config() get_config save conf
+
+10-24 10:24:07.178 dispat
+[PID_LIST] pid_list_init ok, [ ver=May 27 2019, 16:21:04 ] 
+ch.c:4575|main() hw_type(2)
+
+rtscam:begin to load fw from isp.fw
+10-24 10:24:07.364 p2p_tnp.c:6741|main() fshare_open ok
+10-24 10:24:07.370 p2p_tnp.c:2055|p2p_set_tnp_init_status() p2p_set_tnp_init_status 1 send_msg ok!
+
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+/bin/sh: /home/base/tools/hostapd.sh: not found
+[1;33mmain(5473) sys_init ok[m
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+rtscam:begin to load fw from isp.fw
+rtscam:Load firmware size : 131024.
+sensor = SC2230rtscam:begin to load fw from /home/lib/sc2230/isp_jin.fw
+
+===========
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+
+choose isp_jin.fw============
+rtl8168: eth0: link up
+16000 AECNS is free successfully 
+
+***** SMART BABYCRYING - V20160905.1 - *****
+  --- pmstat init_flt2ll[1] diff:108458 us, totalTm: 108458 us
+
+***** SMART BABYCRYING - V20160412.2 - *****
+ppmngr:0x5965b8, len:320000
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+raw_video_init 0
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+~ # cp /* /tmp/sd/f[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+s
+cp: omitting directory '/backup'
+cp: omitting directory '/bin'
+cp: omitting directory '/dev'
+cp: omitting directory '/etc'
+cp: omitting directory '/home'
+cp: can't create '/tmp/sd/fs/init': No such file or directory
+cp: omitting directory '/lib'
+cp: omitting directory '/media'
+cp: omitting directory '/mnt'
+cp: omitting directory '/overlay'
+cp: omitting directory '/proc'
+cp: omitting directory '/rom'
+cp: omitting directory '/root'
+cp: omitting directory '/sys'
+cp: omitting directory '/tmp'
+cp: omitting directory '/usr'
+cp: omitting directory '/var'
+~ # ~ # cp /* /tmp/sd/fs[J  /* /tmp/sd/fs[14D- /* /tmp/sd/fs[14DR /* /tmp/sd/fs[14D  /* /tmp/sd/fs[14D- /* /tmp/sd/fs[14De /* /tmp/sd/fs[14D  /* /tmp/sd/fs[14D/ /* /tmp/sd/fs[14Dt /* /tmp/sd/fs[14Dm /* /tmp/sd/fs[14Dp /* /tmp/sd/fs[14D /* /tmp/sd/fs
+cp: invalid option -- e
+~ # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+~ # rsty[J[Jync
+-/bin/sh: rsync: not found
+~ # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+~ # rsync[J~ # cp -R -e /tmp /* /tmp/sd/fs[J  /* /tmp/sd/fs[J[14D /* /tmp/sd/fs[J[14D /* /tmp/sd/fs[J[14D /* /tmp/sd/fs[J[14D /* /tmp/sd/fs[J[14D /* /tmp/sd/fs
+cp: invalid option -- e
+~ # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+~ # cp -R -e /* /tmp/sd/fs[J /* /tmp/sd/fs[J[14D /* /tmp/sd/fs[J[14D /* /tmp/sd/fs[J[14D /* /tmp/sd/fs
+cp: can't create directory '/tmp/sd/fs/backup': No such file or directory
+cp: can't create directory '/tmp/sd/fs/bin': No such file or directory
+cp: can't create directory '/tmp/sd/fs/dev': No such file or directory
+cp: can't create directory '/tmp/sd/fs/etc': No such file or directory
+cp: can't create directory '/tmp/sd/fs/home': No such file or directory
+cp: can't create symlink '/tmp/sd/fs/init': No such file or directory
+cp: can't create directory '/tmp/sd/fs/lib': No such file or directory
+cp: can't create directory '/tmp/sd/fs/media': No such file or directory
+cp: can't create directory '/tmp/sd/fs/mnt': No such file or directory
+cp: can't create directory '/tmp/sd/fs/overlay': No such file or directory
+cp: can't create directory '/tmp/sd/fs/proc': No such file or directory
+cp: can't create directory '/tmp/sd/fs/rom': No such file or directory
+cp: can't create directory '/tmp/sd/fs/root': No such file or directory
+cp: can't create directory '/tmp/sd/fs/sys': No such file or directory
+cp: can't create symlink '/tmp/sd/fs/tmp': No such file or directory
+cp: can't create directory '/tmp/sd/fs/usr': No such file or directory
+cp: can't create directory '/tmp/sd/fs/var': No such file or directory
+~ # cd /tmp/sd
+/var/tmp/sd # ls -la
+drwxr-xr-x    2 root     root             0 Oct 24  2015 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+-rw-r--r--    1 root     root          4944 Apr 19 11:56 log.txt
+-rw-r--r--    1 root     root           126 Apr 19 11:54 log_oss.txt
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+/home/base/tools/checkdisk
+[1;33mget_cluster_size(349) sector_size:512,sect_per_cluster:32[m
+checkdisk, main() ret_status(10002) 
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+  °CUPi™LH≥]kRñ+K´ÈWÎRÎãÁ“WíVT-+	í®H®hWñ.WÀÎ“´Kó´………I®H®¯Linux version 3.10.27 (zhangzhidan@XY-201) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2521) ) #29 PREEMPT Wed May 22 14:16:12 CST 2019
+prom cpufreq = 500000000
+prom memsize = 67108864
+hw_ver: 0x2, hw_rev: 0x1, isp_ver: 0x1
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+FPU revision is: 01730001
+Determined physical RAM map:
+ memory: 04000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x420000(0x1a00000)
+Zone ranges:
+  Normal   [mem 0x00000000-0x03ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x03ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock3 rts_hconf.hconf_mtd_idx=1 rts-quadspi.channels=dual mtdparts=m25p80:8192k@0(global),192k@0k(boot),1344k@192k(kernel),1792k@1536k(rootfs),3072k@3328k(userdata),1664k@6400k(rootfs_backup),64k@8064k(vd1),64k@8128k(conf)
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 34084k/65536k available (3338k kernel code, 31452k reserved, 580k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:57
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+Init force reset registers
+rtsxb2 registered with IRQs
+INFO: initializing ISP memory ...
+INFO: initializing ISP device ...
+ISP camera platform devices added
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is ffffffff
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO: initializing pinctrl device ...
+pinctrl_platform rts3903-pinctrl: rtspc registered with IRQs
+INFO: initializing ethernet devices ...
+INFO: initializing USB phy ...
+INFO: initializing watchdog controller ...
+INFO: initializing crypto device ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts3903-dmac: DesignWare DMA Controller, 4 channels
+INFO: realtek DMA engine inited
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+msgmni has been set to 66
+NET: Registered protocol family 38
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+console [ttyS1] enabled, bootconsole disabled
+console [ttyS1] enabled, bootconsole disabled
+serial8250: ttyS1 at MMIO 0x18810100 (irq = 6) is a 16550A
+serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+dbg_iomem initialized!
+rts-quadspi rts3903-qspi: force to set channels from quad mode to dual mode
+rts-quadspi rts3903-qspi: request 60000000 Hz, force to set 41666666 Hz
+rts-quadspi rts3903-qspi: found w25q64fv, expected mx25l12835f
+rts-quadspi rts3903-qspi: w25q64fv (8192 Kbytes)
+8 cmdlinepart partitions found on MTD device m25p80
+Creating 8 MTD partitions on "m25p80":
+0x000000000000-0x000000800000 : "global"
+0x000000000000-0x000000030000 : "boot"
+0x000000030000-0x000000180000 : "kernel"
+0x000000180000-0x000000340000 : "rootfs"
+0x000000340000-0x000000640000 : "userdata"
+0x000000640000-0x0000007e0000 : "rootfs_backup"
+0x0000007e0000-0x0000007f0000 : "vd1"
+0x0000007f0000-0x000000800000 : "conf"
+rts-quadspi rts3903-qspi: Realtek QSPI Controller at 0x18030000 (irq 5)
+rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+rtl8168 rts3903-r8168 (unregistered net_device): Get invalid MAC address from flash!
+eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-rts: ehci-rts platform driver
+ehci-platform ehci-platform: EHCI Host Controller
+ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+ehci-platform ehci-platform: irq 11, io mem 0x18100000
+ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+usb usb1: SerialNumber: ehci-platform
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform ohci-platform: Generic Platform OHCI Controller
+ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+ohci-platform ohci-platform: irq 11, io mem 0x18180000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: Generic Platform OHCI Controller
+usb usb2: Manufacturer: Linux 3.10.27 ohci_hcd
+usb usb2: SerialNumber: ohci-platform
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ERROR: Unable to read RTP_REG_DC4_TRIM_OFFSET reg
+ERROR: Unable to read RTP_REG_CHIP_VERSION reg
+rtp_mfd 0-0030: pre_init() failed: -140
+rtp_mfd: probe of 0-0030 failed with error -140
+Stopped watchdog timer
+timer margin: 8 sec
+nf_conntrack version 0.5.0 (532 buckets, 2128 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP: cubic registered
+NET: Registered protocol family 17
+Key type dns_resolver registered
+mtd1 name is boot
+hconf init failed
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+Freeing unused kernel memory: 176K (803e4000 - 80410000)
+usb 1-1: new high-speed USB device number 2 using ehci-platform
+usb 1-1: New USB device found, idVendor=0bda, idProduct=f179
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1: Product: 802.11n
+usb 1-1: Manufacturer: Realtek
+usb 1-1: SerialNumber: 1CBFCE3094A8
+Sat Oct 24 10:24:00 UTC 2015
+ _           _         _            
+| |         | |       | |           
+| |     ___ | |__  ___| |_ ___ _ __ 
+| |    / _ \| '_ \/ __| __/ _ \ '__|
+| |___| (_) | |_) \__ \ ||  __/ |   
+|______\___/|_.__/|___/\__\___|_|   
+                                    
+                                    
+ubusd: can't load library 'libblobmsg_json.so'
+jffs2: notice: (235) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+home_mount_fail=0
+try /home/app/init.sh
+
+Please press Enter to activate this console. [0;32;32mStart [0;32;31m/home/app/init.sh...[m
+rlx snd internal codec init
+soc-audio soc-audio.0.auto: ASoC: machine RLX_INTERN_CARD should use snd_soc_register_card()
+soc-audio soc-audio.0.auto:  rlx-codec-digital <-> pcm-platform mapping ok
+soc-audio soc-audio.0.auto:  rlx-codec-analog <-> pcm-platform mapping ok
+usbcore: registered new interface driver rtl8188fu
+rtscam:isp resvd mem addr : 0x00520000, size : 0x1900000
+rtscam:rtscam_mem_init v:0xa0520000 p:0x00520000 s:0x00001900
+rtscam:rtscam_lock_init
+rtscam:rtscam_soc_probe
+rtscam:rtscam_hx280_probe
+rtscam:hx280enc:HW at base <0x18060000> with ID <0x48317011>
+rtscam:rtscam_jpgenc_probe
+rtscam:rtscam_osd2_probe
+rtscam:rtstream_init
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+mmc0: new ultra high speed SDR50 SDHC card at address 0007
+mmcblk0: mmc0:0007 SD32G 28.9 GiB 
+ mmcblk0: p1
+10-24 10:24:04.012 checkdisk.c:106|get_tfcard_size_v2() TF card total size : 29664 MB
+
+10-24 10:24:04.014 checkdisk.c:290|get_fs_type() FS TYPE : VFAT
+
+[1;33mget_cluster_size(349) sector_size:512,sect_per_cluster:8[m
+10-24 10:24:04.034 checkdisk.c:355|get_cluster_size() cluster_size = 4096 Bytes
+
+10-24 10:24:04.034 checkdisk.c:504|main() FS cluster size is too little. cluster_size = 4096 
+checkdisk, main() ret_status(10002) 
+32+0 records in
+32+0 records out
+32 bytes (32B) copied, 0.004853 seconds, 6.4KB/s
+high level enable
+numid=8,iface=MIXER,name='Master Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=127,127
+  | dBscale-min=-33.50dB,step=0.50dB,mute=0
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+numid=1,iface=MIXER,name='Master Playback Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=109,109
+  | dBscale-min=-63.50dB,step=0.50dB,mute=0
+numid=11,iface=MIXER,name='Real Amic Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=69,step=0
+  : values=30,30
+  | dBscale-min=-6.00dB,step=0.75dB,mute=0
+---update file(home_r10m) Not exist---
+./init.sh: line 124: mDNSRespoderPosix: not found
+./init.sh: line 129: can't create /proc/sys/vm/extfrag_threshold: nonexistent directory
+./init.sh: line 130: can't create /proc/sys/vm/compact_memory: nonexistent directory
+hw_ver[32]=[21121113000000000000000000000000] 
+gpio_pin[32]=[32003002110022000000000000000000] 
+hw  =[21121113000000000000000000000000] 
+gpio=[32003002110022000000000000000000] 
+[CPLD_PERIPH] CPLD_PERIPH module inited 
+moto not support !!! 
+Started watchdog timer
+Started watchdog timer
+hue, start_with_reset = 1 @get_config()->g_sysconf.ssid == 0 
+10-24 10:24:07.469 dispatch.c:1283|get_config() get_config save conf
+
+10-24 10:24:07.469 dispatch.c:4575|main() hw_type(2)
+
+10-24 10:24:07.572 cloud.c:5399|sys_init() open share mem ok
+
+
+[PID_LIST] pid_list_init ok, [ ver=May 27 2019, 16:21:04 ] 
+rtscam:begin to load fw from isp.fw
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+[1;33mmain(5473) sys_init ok[m
+/bin/sh: /home/base/tools/hostapd.sh: not found
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+rtscam:begin to load fw from isp.fw
+rtscam:Load firmware size : 131024.
+sensor = SC2230rtscam:begin to load fw from /home/lib/sc2230/isp_jin.fw
+
+===========
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+
+choose isp_jin.fw============
+rtl8168: eth0: link up
+16000 AECNS is free successfully 
+
+***** SMART BABYCRYING - V20160905.1 - *****
+  --- pmstat init_flt2ll[1] diff:108389 us, totalTm: 108389 us
+
+***** SMART BABYCRYING - V20160412.2 - *****
+ppmngr:0x5965b8, len:320000
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+raw_video_init 0
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+FS [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+cd /tmp
+~ # cd /killall: mp4_record: no process killed
+tmp
+/var/tmp # cd /
+~ # ls -la
+drwxrwxr-x   17 1004     1004           215 Sep 27  2019 .
+drwxrwxr-x   17 1004     1004           215 Sep 27  2019 ..
+drwxr-xr-x    5 root     root             0 Jan  1  1970 backup
+drwxrwxr-x    2 1004     1004          1283 Sep 27  2019 bin
+drwxr-xr-x    6 root     root             0 Apr 19 11:54 dev
+drwxrwxr-x    7 1004     1004           321 Sep 27  2019 etc
+drwxrwxr-x    6 1004     1004            91 Sep 27  2019 home
+lrwxrwxrwx    1 1004     1004             8 Sep 27  2019 init -> bin/init
+drwxrwxr-x    4 1004     1004           944 Sep 27  2019 lib
+drwxr-xr-x    2 root     root            40 Oct 24  2015 media
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 mnt
+drwxrwxr-x    2 1004     1004            44 Sep 27  2019 overlay
+dr-xr-xr-x   53 root     root             0 Jan  1  1970 proc
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 rom
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 root
+dr-xr-xr-x   11 root     root             0 Jan  1  1970 sys
+lrwxrwxrwx    1 1004     1004             8 Sep 27  2019 tmp -> /var/tmp
+drwxrwxr-x    4 1004     1004            40 Sep 27  2019 usr
+drwxr-xr-x    7 root     root             0 Jan  1  1970 var
+~ # cd tmp
+/var/tmp # cd[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+ sd
+/var/tmp/sd # ls -la
+drwxr-xr-x    2 root     root             0 Oct 24  2015 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+-rw-r--r--    1 root     root          5038 Apr 19 11:56 log.txt
+-rw-r--r--    1 root     root           126 Apr 19 11:54 log_oss.txt
+/var/tmp/sd # df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+rootfs                    1664      1664         0 100% /
+/dev/root                 1664      1664         0 100% /
+tmpfs                    17128        76     17052   0% /dev/shm
+tmpfs                       64         0        64   0% /media
+/dev/mtdblock5            1664      1224       440  74% /backup
+/dev/mtdblock4            2560      2560         0 100% /home
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+fi[Jdisk -l
+
+Disk /dev/mtdblock0: 8 MB, 8388608 bytes
+255 heads, 63 sectors/track, 1 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock0 doesn't contain a valid partition table
+
+Disk /dev/mtdblock1: 0 MB, 196608 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock1 doesn't contain a valid partition table
+
+Disk /dev/mtdblock2: 1 MB, 1376256 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock2 doesn't contain a valid partition table
+
+Disk /dev/mtdblock3: 1 MB, 1835008 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock3 doesn't contain a valid partition table
+
+Disk /dev/mtdblock4: 3 MB, 3145728 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock4 doesn't contain a valid partition table
+
+Disk /dev/mtdblock5: 1 MB, 1703936 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock5 doesn't contain a valid partition table
+
+Disk /dev/mtdblock6: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock6 doesn't contain a valid partition table
+
+Disk /dev/mtdblock7: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock7 doesn't contain a valid partition table
+
+Disk /dev/mmcblk0: 31.1 GB, 31104958464 bytes
+54 heads, 48 sectors/track, 23438 cylinders
+Units = cylinders of 2592 * 512 = 1327104 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1               1        1619     2097152   6 FAT16
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+  °CUP©™L@≥]kRñ+K´ÈWÎRÎã◊“WíVT-+	í®H®hEÖ…—•πùÅZï…πï±ÅπrrRh§‘¯Linux version 3.10.27 (zhangzhidan@XY-201) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2521) ) #29 PREEMPT Wed May 22 14:16:12 CST 2019
+prom cpufreq = 500000000
+prom memsize = 67108864
+hw_ver: 0x2, hw_rev: 0x1, isp_ver: 0x1
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+FPU revision is: 01730001
+Determined physical RAM map:
+ memory: 04000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x420000(0x1a00000)
+Zone ranges:
+  Normal   [mem 0x00000000-0x03ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x03ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock3 rts_hconf.hconf_mtd_idx=1 rts-quadspi.channels=dual mtdparts=m25p80:8192k@0(global),192k@0k(boot),1344k@192k(kernel),1792k@1536k(rootfs),3072k@3328k(userdata),1664k@6400k(rootfs_backup),64k@8064k(vd1),64k@8128k(conf)
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 34084k/65536k available (3338k kernel code, 31452k reserved, 580k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:57
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+Init force reset registers
+rtsxb2 registered with IRQs
+INFO: initializing ISP memory ...
+INFO: initializing ISP device ...
+ISP camera platform devices added
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is ffffffff
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO: initializing pinctrl device ...
+pinctrl_platform rts3903-pinctrl: rtspc registered with IRQs
+INFO: initializing ethernet devices ...
+INFO: initializing USB phy ...
+INFO: initializing watchdog controller ...
+INFO: initializing crypto device ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts3903-dmac: DesignWare DMA Controller, 4 channels
+INFO: realtek DMA engine inited
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+msgmni has been set to 66
+NET: Registered protocol family 38
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+console [ttyS1] enabled, bootconsole disabled
+console [ttyS1] enabled, bootconsole disabled
+serial8250: ttyS1 at MMIO 0x18810100 (irq = 6) is a 16550A
+serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+dbg_iomem initialized!
+rts-quadspi rts3903-qspi: force to set channels from quad mode to dual mode
+rts-quadspi rts3903-qspi: request 60000000 Hz, force to set 41666666 Hz
+rts-quadspi rts3903-qspi: found w25q64fv, expected mx25l12835f
+rts-quadspi rts3903-qspi: w25q64fv (8192 Kbytes)
+8 cmdlinepart partitions found on MTD device m25p80
+Creating 8 MTD partitions on "m25p80":
+0x000000000000-0x000000800000 : "global"
+0x000000000000-0x000000030000 : "boot"
+0x000000030000-0x000000180000 : "kernel"
+0x000000180000-0x000000340000 : "rootfs"
+0x000000340000-0x000000640000 : "userdata"
+0x000000640000-0x0000007e0000 : "rootfs_backup"
+0x0000007e0000-0x0000007f0000 : "vd1"
+0x0000007f0000-0x000000800000 : "conf"
+rts-quadspi rts3903-qspi: Realtek QSPI Controller at 0x18030000 (irq 5)
+rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+rtl8168 rts3903-r8168 (unregistered net_device): Get invalid MAC address from flash!
+eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-rts: ehci-rts platform driver
+ehci-platform ehci-platform: EHCI Host Controller
+ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+ehci-platform ehci-platform: irq 11, io mem 0x18100000
+ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+usb usb1: SerialNumber: ehci-platform
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform ohci-platform: Generic Platform OHCI Controller
+ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+ohci-platform ohci-platform: irq 11, io mem 0x18180000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: Generic Platform OHCI Controller
+usb usb2: Manufacturer: Linux 3.10.27 ohci_hcd
+usb usb2: SerialNumber: ohci-platform
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ERROR: Unable to read RTP_REG_DC4_TRIM_OFFSET reg
+ERROR: Unable to read RTP_REG_CHIP_VERSION reg
+rtp_mfd 0-0030: pre_init() failed: -140
+rtp_mfd: probe of 0-0030 failed with error -140
+Stopped watchdog timer
+timer margin: 8 sec
+nf_conntrack version 0.5.0 (532 buckets, 2128 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP: cubic registered
+NET: Registered protocol family 17
+Key type dns_resolver registered
+mtd1 name is boot
+hconf init failed
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+Freeing unused kernel memory: 176K (803e4000 - 80410000)
+usb 1-1: new high-speed USB device number 2 using ehci-platform
+usb 1-1: New USB device found, idVendor=0bda, idProduct=f179
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1: Product: 802.11n
+usb 1-1: Manufacturer: Realtek
+usb 1-1: SerialNumber: 1CBFCE3094A8
+Sat Oct 24 10:24:00 UTC 2015
+ _           _         _            
+| |         | |       | |           
+| |     ___ | |__  ___| |_ ___ _ __ 
+| |    / _ \| '_ \/ __| __/ _ \ '__|
+| |___| (_) | |_) \__ \ ||  __/ |   
+|______\___/|_.__/|___/\__\___|_|   
+                                    
+                                    
+ubusd: can't load library 'libblobmsg_json.so'
+jffs2: notice: (235) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+home_mount_fail=0
+try /home/app/init.sh
+
+Please press Enter to activate this console. [0;32;32mStart [0;32;31m/home/app/init.sh...[m
+rlx snd internal codec init
+soc-audio soc-audio.0.auto: ASoC: machine RLX_INTERN_CARD should use snd_soc_register_card()
+soc-audio soc-audio.0.auto:  rlx-codec-digital <-> pcm-platform mapping ok
+soc-audio soc-audio.0.auto:  rlx-codec-analog <-> pcm-platform mapping ok
+usbcore: registered new interface driver rtl8188fu
+rtscam:isp resvd mem addr : 0x00520000, size : 0x1900000
+rtscam:rtscam_mem_init v:0xa0520000 p:0x00520000 s:0x00001900
+rtscam:rtscam_lock_init
+rtscam:rtscam_soc_probe
+rtscam:rtscam_hx280_probe
+rtscam:hx280enc:HW at base <0x18060000> with ID <0x48317011>
+rtscam:rtscam_jpgenc_probe
+rtscam:rtscam_osd2_probe
+rtscam:rtstream_init
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+mmc0: new ultra high speed SDR50 SDHC card at address 0007
+mmcblk0: mmc0:0007 SD32G 28.9 GiB 
+ mmcblk0: p1
+10-24 10:24:03.951 checkdisk.c:106|get_tfcard_size_v2() TF card FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+total size : 29664 MB
+
+10-24 10:24:03.953 checkdisk.c:290|get_fs_type() FS TYPE : VFAT
+
+[1;33mget_cluster_size(349) sector_size:512,sect_per_cluster:32[m
+10-24 10:24:04.005 checkdisk.c:355|get_cluster_size() cluster_size = 16384 Bytes
+
+10-24 10:24:04.005 checkdisk.c:504|main() FS cluster size is too little. cluster_size = 16384 
+checkdisk, main() ret_status(10002) 
+32+0 records in
+32+0 records out
+32 bytes (32B) copied, 0.005070 seconds, 6.2KB/s
+high level enable
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+numid=8,iface=MIXER,name='Master Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=127,127
+  | dBscale-min=-33.50dB,step=0.50dB,mute=0
+numid=1,iface=MIXER,name='Master Playback Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=109,109
+  | dBscale-min=-63.50dB,step=0.50dB,mute=0
+numid=11,iface=MIXER,name='Real Amic Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=69,step=0
+  : values=30,30
+  | dBscale-min=-6.00dB,step=0.75dB,mute=0
+---update file(home_r10m) Not exist---
+./init.sh: line 124: mDNSRespoderPosix: not found
+./init.sh: line 129: can't create /proc/sys/vm/extfrag_threshold: nonexistent directory
+./init.sh: line 130: can't create /proc/sys/vm/compact_memory: nonexistent directory
+hw_ver[32]=[21121113000000000000000000000000] 
+gpio_pin[32]=[32003002110022000000000000000000] 
+hw  =[21121113000000000000000000000000] 
+gpio=[32003002110022000000000000000000] 
+[CPLD_PERIPH] CPLD_PERIPH module inited 
+moto not support !!! 
+Started watchdog timer
+Started watchdog timer
+hue, start_with_reset = 1 @get_config()->g_sysconf.ssid == 0 
+1
+[PID_LIST] pid_list_init ok, [ ver=May 27 2019, 16:21:04 ] 
+0-24 10:24:07.424 dispatch.c:374|send_saveconfig_msg() send_saveconfig_msg msg snd success
+10-24 10:24:07.424 dispatch.c:1283|get_config() get_config save conf
+
+10-24 10:24:07.424 dispatch.c:4575|main() hw_type(2)
+
+rtscam:begin to load fw from isp.fw
+10-24 10:24:07.818 dispatch.c:501|choose_server() in choose_server, region_id = 1, api_server = https://plt-api.xiaoyi.com, sname = RealPJ, dlproto = micn
+
+10-24 10:24:07.819 dispatch.c:4732|main() init ok, cost time(550 ms)
+10-24 10:24:07.822 dispatch.c:962|save_config() got pwd()()
+10-24 10:24:07.822 dispatch.c:963|save_config() got ssid()()
+/bin/sh: /home/base/tools/hostapd.sh: not found
+[1;33mmain(5473) sys_init ok[m
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+rtscam:begin to load fw from isp.fw
+rtscam:Load firmware size : 131024.
+sensor = SC2230rtscam:begin to load fw from /home/lib/sc2230/isp_jin.fw
+
+===========
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+
+choose isp_jin.fw============
+rtl8168: eth0: link up
+16000 AECNS is free successfully 
+
+***** SMART BABYCRYING - V20160905.1 - *****
+  --- pmstat init_flt2ll[1] diff:108423 us, totalTm: 108423 us
+
+***** SMART BABYCRYING - V20160412.2 - *****
+ppmngr:0x5965b8, len:320000
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+raw_video_init 0
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+~ # fd[Jsck
+-/bin/sh: fsck: not found
+~ # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+fdisk
+~ # ~ # fdisk[J -l
+
+Disk /dev/mtdblock0: 8 MB, 8388608 bytes
+255 heads, 63 sectors/track, 1 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock0 doesn't contain a valid partition table
+
+Disk /dev/mtdblock1: 0 MB, 196608 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock1 doesn't contain a valid partition table
+
+Disk /dev/mtdblock2: 1 MB, 1376256 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock2 doesn't contain a valid partition table
+
+Disk /dev/mtdblock3: 1 MB, 1835008 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock3 doesn't contain a valid partition table
+
+Disk /dev/mtdblock4: 3 MB, 3145728 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock4 doesn't contain a valid partition table
+
+Disk /dev/mtdblock5: 1 MB, 1703936 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock5 doesn't contain a valid partition table
+
+Disk /dev/mtdblock6: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock6 doesn't contain a valid partition table
+
+Disk /dev/mtdblock7: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock7 doesn't contain a valid partition table
+
+Disk /dev/mmcblk0: 31.1 GB, 31104958464 bytes
+54 heads, 48 sectors/track, 23438 cylinders
+Units = cylinders of 2592 * 512 = 1327104 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1               1        1619     2097152   6 FAT16
+~ # mount [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+/dev/mmcblk0p1 /tmp./s[J[J[J.[J/sd
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+~ # cd /tmp/sd
+/var/tmp/sd # ls -la
+drwxr-xr-x    4 root     root         16384 Jan  1  1970 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+drwxr-xr-x 1317 root     root        540672 Feb 25  2023 FOUND.000
+-rwxr-xr-x    1 root     root             0 Feb 25  2023 New Text Document.txt
+-rwxr-xr-x    1 root     root         16384 Feb 25  2023 System Volume Information
+drwxr-xr-x    0 root     root         16384 Feb 25  2023 lib
+-rwxr-xr-x    1 root     root        531968 Aug  9  2021 rRTSPServer
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+   °®5îU$VókRñ+N´ÈWÎ©Îã◊iWîV¨-+	I®H®hEÖ…—•πùÅZï…πï±ÅπrrR‘§‘¯Linux version 3.10.27 (zhangzhidan@XY-201) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2521) ) #29 PREEMPT Wed May 22 14:16:12 CST 2019
+prom cpufreq = 500000000
+prom memsize = 67108864
+hw_ver: 0x2, hw_rev: 0x1, isp_ver: 0x1
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+FPU revision is: 01730001
+Determined physical RAM map:
+ memory: 04000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x420000(0x1a00000)
+Zone ranges:
+  Normal   [mem 0x00000000-0x03ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x03ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock3 rts_hconf.hconf_mtd_idx=1 rts-quadspi.channels=dual mtdparts=m25p80:8192k@0(global),192k@0k(boot),1344k@192k(kernel),1792k@1536k(rootfs),3072k@3328k(userdata),1664k@6400k(rootfs_backup),64k@8064k(vd1),64k@8128k(conf)
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 34084k/65536k available (3338k kernel code, 31452k reserved, 580k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:57
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+Init force reset registers
+rtsxb2 registered with IRQs
+INFO: initializing ISP memory ...
+INFO: initializing ISP device ...
+ISP camera platform devices added
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is ffffffff
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO: initializing pinctrl device ...
+pinctrl_platform rts3903-pinctrl: rtspc registered with IRQs
+INFO: initializing ethernet devices ...
+INFO: initializing USB phy ...
+INFO: initializing watchdog controller ...
+INFO: initializing crypto device ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts3903-dmac: DesignWare DMA Controller, 4 channels
+INFO: realtek DMA engine inited
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+msgmni has been set to 66
+NET: Registered protocol family 38
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+console [ttyS1] enabled, bootconsole disabled
+console [ttyS1] enabled, bootconsole disabled
+serial8250: ttyS1 at MMIO 0x18810100 (irq = 6) is a 16550A
+serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+dbg_iomem initialized!
+rts-quadspi rts3903-qspi: force to set channels from quad mode to dual mode
+rts-quadspi rts3903-qspi: request 60000000 Hz, force to set 41666666 Hz
+rts-quadspi rts3903-qspi: found w25q64fv, expected mx25l12835f
+rts-quadspi rts3903-qspi: w25q64fv (8192 Kbytes)
+8 cmdlinepart partitions found on MTD device m25p80
+Creating 8 MTD partitions on "m25p80":
+0x000000000000-0x000000800000 : "global"
+0x000000000000-0x000000030000 : "boot"
+0x000000030000-0x000000180000 : "kernel"
+0x000000180000-0x000000340000 : "rootfs"
+0x000000340000-0x000000640000 : "userdata"
+0x000000640000-0x0000007e0000 : "rootfs_backup"
+0x0000007e0000-0x0000007f0000 : "vd1"
+0x0000007f0000-0x000000800000 : "conf"
+rts-quadspi rts3903-qspi: Realtek QSPI Controller at 0x18030000 (irq 5)
+rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+rtl8168 rts3903-r8168 (unregistered net_device): Get invalid MAC address from flash!
+eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-rts: ehci-rts platform driver
+ehci-platform ehci-platform: EHCI Host Controller
+ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+ehci-platform ehci-platform: irq 11, io mem 0x18100000
+ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+usb usb1: SerialNumber: ehci-platform
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform ohci-platform: Generic Platform OHCI Controller
+ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+ohci-platform ohci-platform: irq 11, io mem 0x18180000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: Generic Platform OHCI Controller
+usb usb2: Manufacturer: Linux 3.10.27 ohci_hcd
+usb usb2: SerialNumber: ohci-platform
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ERROR: Unable to read RTP_REG_DC4_TRIM_OFFSET reg
+ERROR: Unable to read RTP_REG_CHIP_VERSION reg
+rtp_mfd 0-0030: pre_init() failed: -140
+rtp_mfd: probe of 0-0030 failed with error -140
+Stopped watchdog timer
+timer margin: 8 sec
+nf_conntrack version 0.5.0 (532 buckets, 2128 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP: cubic registered
+NET: Registered protocol family 17
+Key type dns_resolver registered
+mtd1 name is boot
+hconf init failed
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+Freeing unused kernel memory: 176K (803e4000 - 80410000)
+usb 1-1: new high-speed USB device number 2 using ehci-platform
+usb 1-1: New USB device found, idVendor=0bda, idProduct=f179
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1: Product: 802.11n
+usb 1-1: Manufacturer: Realtek
+usb 1-1: SerialNumber: 1CBFCE3094A8
+Sat Oct 24 10:24:00 UTC 2015
+ _           _         _            
+| |         | |       | |           
+| |     ___ | |__  ___| |_ ___ _ __ 
+| |    / _ \| '_ \/ __| __/ _ \ '__|
+| |___| (_) | |_) \__ \ ||  __/ |   
+|______\___/|_.__/|___/\__\___|_|   
+                                    
+                                    
+ubusd: can't load library 'libblobmsg_json.so'
+jffs2: notice: (235) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+home_mount_fail=0
+try /home/app/init.sh
+
+Please press Enter to activate this console. [0;32;32mStart [0;32;31m/home/app/init.sh...[m
+rlx snd internal codec init
+soc-audio soc-audio.0.auto: ASoC: machine RLX_INTERN_CARD should use snd_soc_register_card()
+soc-audio soc-audio.0.auto:  rlx-codec-digital <-> pcm-platform mapping ok
+soc-audio soc-audio.0.auto:  rlx-codec-analog <-> pcm-platform mapping ok
+usbcore: registered new interface driver rtl8188fu
+rtscam:isp resvd mem addr : 0x00520000, size : 0x1900000
+rtscam:rtscam_mem_init v:0xa0520000 p:0x00520000 s:0x00001900
+rtscam:rtscam_lock_init
+rtscam:rtscam_soc_probe
+rtscam:rtscam_hx280_probe
+rtscam:hx280enc:HW at base <0x18060000> with ID <0x48317011>
+rtscam:rtscam_jpgenc_probe
+rtscam:rtscam_osd2_probe
+rtscam:rtstream_init
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+mmc0: new ultra high speed SDR50 SDHC card at address 0007
+mmcblk0: mmc0:0007 SD32G 28.9 GiB 
+ mmcblk0: p1
+10-24 10:24:03.951 checkdisk.c:106|get_tfcard_size_v2() TF card total size : 29664 MB
+
+10-24 10:24:03.953 checkdisk.c:290|get_fs_type() FS TYPE : VFAT
+
+[1;33mget_cluster_size(349) sector_size:512,sect_per_cluster:8[m
+10-24 10:24:03.975 checkdisk.c:355|get_cluster_size() cluster_size = 4096 Bytes
+
+10-24 10:24:03.975 checkdisk.c:504|main() FS cluster size is too little. cluster_size = 4096 
+checkdisk, main() ret_status(10002) 
+32+0 records in
+32+0 records out
+32 bytes (32B) copied, 0.005737 seconds, 5.4KB/s
+high level enable
+numid=8,iface=MIXER,name='Master Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=127,127
+  | dBscale-min=-33.50dB,step=0.50dB,mute=0
+numid=1,iface=MIXER,name='Master Playback Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=109,109
+  | dBscale-min=-63.50dB,step=0.50dB,mute=0
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+numid=11,iface=MIXER,name='Real Amic Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=69,step=0
+  : values=30,30
+  | dBscale-min=-6.00dB,step=0.75dB,mute=0
+---update file(home_r10m) Not exist---
+./init.sh: line 124: mDNSRespoderPosix: not found
+./init.sh: line 129: can't create /proc/sys/vm/extfrag_threshold: nonexistent directory
+./init.sh: line 130: can't create /proc/sys/vm/compact_memory: nonexistent directory
+hw_ver[32]=[21121113000000000000000000000000] 
+gpio_pin[32]=[32003002110022000000000000000000] 
+hw  =[21121113000000000000000000000000] 
+gpio=[32003002110022000000000000000000] 
+[CPLD_PERIPH] CPLD_PERIPH module inited 
+moto not support !!! 
+Started watchdog timer
+Started watchdog timer
+hue, start_with_reset = 1 @get_config()->g_sysconf.ssid == 0 
+10-24 10:24:07.418 dispatch.c:374|send_saveconfig_msg() send_saveconfig_msg msg snd success
+10-24 10:24:07.418 dispatch.c:1283|get_config() get_config save conf
+
+10-24 10:24:07.418 dispatch.c:4575|main() hw_type(2)
+
+
+[PID_LIST] pid_list_init ok, [ ver=May 27 2019, 16:21:04 ] 
+rtscam:begin to load fw from isp.fw
+[1;33mmain(5473) sys_init ok[m
+rtscam:Load firmware size : 131024.
+/bin/sh: /home/base/tools/hostapd.sh: not found
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+rtscam:begin to load fw from isp.fw
+rtscam:Load firmware size : 131024.
+sensor = SC2230rtscam:begin to load fw from /home/lib/sc2230/isp_jin.fw
+
+===========
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+
+choose isp_jin.fw============
+rtl8168: eth0: link up
+16000 AECNS is free successfully 
+
+***** SMART BABYCRYING - V20160905.1 - *****
+  --- pmstat init_flt2ll[1] diff:108497 us, totalTm: 108497 us
+
+***** SMART BABYCRYING - V20160412.2 - *****
+ppmngr:0x5965b8, len:320000
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+raw_video_init 0
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+~ # cd /tmp/sd
+/var/tmp/sd # ls -la
+drwxr-xr-x    2 root     root             0 Oct 24  2015 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+-rw-r--r--    1 root     root          3260 Apr 19 11:55 log.txt
+-rw-r--r--    1 root     root           126 Apr 19 11:54 log_oss.txt
+/var/tmp/sd # mount[J[J[J[J[Jdf
+Filesystem           1K-blocks      Used Available Use% Mounted on
+rootfs                    1664      1664         0 100% /
+/dev/root                 1664      1664         0 100% /
+tmpfs                    17128        76     17052   0% /dev/shm
+tmpfs                       64         0        64   0% /media
+/dev/mtdblock5            1664      1224       440  74% /backup
+/dev/mtdblock4            2560      2560         0 100% /home
+/var/tmp/sd # sd[J[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[J
+/var/tmp/sd # fdisk -l
+
+Disk /dev/mtdblock0: 8 MB, 8388608 bytes
+255 heads, 63 sectors/track, 1 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock0 doesn't contain a valid partition table
+
+Disk /dev/mtdblock1: 0 MB, 196608 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock1 doesn't contain a valid partition table
+
+Disk /dev/mtdblock2: 1 MB, 1376256 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock2 doesn't contain a valid partition table
+
+Disk /dev/mtdblock3: 1 MB, 1835008 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock3 doesn't contain a valid partition table
+
+Disk /dev/mtdblock4: 3 MB, 3145728 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock4 doesn't contain a valid partition table
+
+Disk /dev/mtdblock5: 1 MB, 1703936 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock5 doesn't contain a valid partition table
+
+Disk /dev/mtdblock6: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock6 doesn't contain a valid partition table
+
+Disk /dev/mtdblock7: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock7 doesn't contain a valid partition table
+
+Disk /dev/mmcblk0: 31.1 GB, 31104958464 bytes
+255 heads, 2 sectors/track, 119121 cylinders
+Units = cylinders of 510 * 512 = 261120 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1               5        7666     1953792   c Win95 FAT32 (LBA)
+/var/tmp/sd # mount[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+ /dev/mmcblk0p1 /tmp/sd
+/var/tmp/sd # ls -la
+drwxr-xr-x    2 root     root             0 Oct 24  2015 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+-rw-r--r--    1 root     root          3934 Apr 19 11:55 log.txt
+-rw-r--r--    1 root     root           126 Apr 19 11:54 log_oss.txt
+/var/tmp/sd # /var/tmp/sd # ls -la[J/var/tmp/sd # mount /dev/mmcblk0p1 /tmp/sd[J[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+mount: mounting /dev/mmcblk0p1 on /tmp/sd failed: Device or resource busy
+/var/tmp/sd # ls [J[J[Jcd /tmp/sd
+/var/tmp/sd # ls -la
+drwxr-xr-x    5 root     root          4096 Jan  1  1970 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+drwxr-xr-x    3 root     root          4096 Aug  9  2021 Yi
+-rwxr-xr-x    1 root     root             0 Aug  9  2021 invert_adc_rename_me
+drwxr-xr-x    2 root     root          4096 Aug  9  2021 lib
+-rwxr-xr-x    1 root     root        531968 Aug  9  2021 rRTSPServer
+-rwxr-xr-x    1 root     root         14713 Aug  9  2021 stream
+drwxr-xr-x    2 root     root          4096 Aug  9  2021 wifi
+-rwxr-xr-x    1 root     root           291 Aug  9  2021 wpa_supplicant_sample.conf
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+/var/tmp/sd # ./rkillall: mp4_record: no process killed
+TSPS[J[J[J[J[J[J[J
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+ifconfig eth0 10.98.7.199
+ifconfig eth0 netmask 255.255.255.0/var/tmp/sd # ifconfig eth0 netmask 255.255.255.0
+/var/tmp/sd # cd /o[Jhome/app
+/home/app # l;s [J[J[Js -la
+drwxrwxr-x    6 1004     1004           371 Sep 27  2019 .
+drwxrwxr-x    6 1004     1004            91 Sep 27  2019 ..
+-rw-rw-r--    1 1004     1004            24 Sep 27  2019 .appver
+lrwxrwxrwx    1 1004     1004             3 Sep 27  2019 aacplay -> rmm
+-rwxrwxr-x    1 1004     1004          8391 Sep 27  2019 arp_test
+drwxrwxr-x    5 1004     1004            55 Sep 27  2019 audio_file
+-rwxrwxr-x    1 1004     1004         79719 Sep 27  2019 cloud
+-rwxrwxr-x    1 1004     1004         32987 Sep 27  2019 crypt_file
+-rwxrwxr-x    1 1004     1004         90871 Sep 27  2019 dispatch
+-rwxrwxr-x    1 1004     1004          3786 Sep 27  2019 init.sh
+-rwxrwxr-x    1 1004     1004          5639 Sep 27  2019 load_cpld_ssp
+drwxrwxr-x    2 1004     1004            73 Sep 27  2019 localbin
+drwxrwxr-x    2 1004     1004           106 Sep 27  2019 localko
+drwxrwxr-x    2 1004     1004            30 Sep 27  2019 locallib
+-rwxrwxr-x    1 1004     1004          6423 Sep 27  2019 log_server
+-rwxrwxr-x    1 1004     1004         37451 Sep 27  2019 mp4record
+-rwxrwxr-x    1 1004     1004       1377711 Sep 27  2019 oss
+-rwxrwxr-x    1 1004     1004        358599 Sep 27  2019 p2p_tnp
+-rwxrwxr-x    1 1004     1004         29643 Sep 27  2019 recbackup
+-rwxrwxr-x    1 1004     1004        361075 Sep 27  2019 rmm
+lrwxrwxrwx    1 1004     1004            14 Sep 27  2019 script -> /backup/script
+-rwxrwxr-x    1 1004     1004          8887 Sep 27  2019 upgrade_firmware
+-rwxrwxr-x    1 1004     1004          8423 Sep 27  2019 watch_process
+-rwxrwxr-x    1 1004     1004           338 Sep 27  2019 wp_cmd
+/home/app # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+cd init.sh
+-/bin/sh: cd: can't cd to init.sh
+/home/app # ./init.sh
+[0;32;32mStart [0;32;31m/home/app/init.sh...[m
+insmod: can't insert '/home/rt/ko/rlx_dma.ko': File exists
+insmod: can't insert '/home/rt/ko/rlx_i2s.ko': File exists
+insmod: can't insert '/home/rt/ko/rlx_codec.ko': File exists
+insmod: can't insert '/home/rt/ko/rlx_snd_intern.ko': File exists
+insmod: can't insert '/backup/8188fu.ko': File exists
+insmod: can't insert '/home/rt/ko/rtsx-icr.ko': File exists
+insmod: can't insert '/home/rt/ko/rts_cam.ko': File exists
+insmod: can't insert '/home/rt/ko/rts_cam_mem.ko': File exists
+insmod: can't insert '/home/rt/ko/rts_cam_lock.ko': File exists
+insmod: can't insert '/home/rt/ko/rts_camera_soc.ko': File exists
+insmod: can't insert '/home/rt/ko/rts_camera_hx280enc.ko': File exists
+insmod: can't insert '/home/rt/ko/rts_camera_jpgenc.ko': File exists
+insmod: can't insert '/home/rt/ko/rts_camera_osd2.ko': File exists
+insmod: can't insert '/home/rt/ko/rtstream.ko': File exists
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1d 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 4d 00 07 00 00 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 a8 91 80 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: mmc_blk_err_check: general error sending status command, card status 0x1c1ca0
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 requesting status
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 55 0x00070000 (-145, 0)
+end_request: I/O error, dev mmcblk0, sector 2048
+Buffer I/O error on device mmcblk0p1, logical block 0
+lost page write due to I/O error on mmcblk0p1
+killall: mp4_record: no process killed
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+sd-platform rts3903-sdhc: rtsx_icr_transfer_data error: -145: HDBAR = 03034400 -> 03034408, HDBCTLR = A0000000
+sd-platform rts3903-sdhc: rtsx_icr_transfer_data error: SDMAR = 02948000, SDMACTLR = a0001000
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD50(8): 00 00 00 00 00 04 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD58(8): 00 00 00 00 00 a9 03 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD60(8): aa 0f 00 e5 00 00 24 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD68(8): 04 02 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 20 00 0e 91 01 01 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF20(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF28(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF30(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF38(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF40(8): 2b 5a 0c 16 97 50 4d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF48(8): 02 08 03 01 01 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF50(8): 00 01 30 10 1b 01 00 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF58(8): 03 03 00 00 00 00 00 00
+sd-platform rts3903-sdhc: rtsx_icr_dump_dma_table error: ADMA table at 03034400: 02948000, 1000, 0021
+sd-platform rts3903-sdhc: rtsx_icr_dump_dma_table error: ADMA table at 03034408: 029d1000, 1000, 0021
+sd-platform rts3903-sdhc: rtsx_icr_dump_dma_table error: ADMA table at 03034410: 02942000, 1000, 0021
+sd-platform rts3903-sdhc: rtsx_icr_dump_dma_table error: ADMA table at 03034418: 0294d000, 1000, 0023
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 09 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 20 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 18 0x00000800 (-145, -145)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 20 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, retrying
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 20 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, retrying
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 03034000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 20 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, aborting
+end_request: I/O error, dev mmcblk0, sector 2048
+Buffer I/O error on device mmcblk0p1, logical block 0
+end_request: I/O error, dev mmcblk0, sector 2056
+Buffer I/O error on device mmcblk0p1, logical block 1
+end_request: I/O error, dev mmcblk0, sector 2064
+Buffer I/O error on device mmcblk0p1, logical block 2
+end_request: I/O error, dev mmcblk0, sector 2072
+Buffer I/O error on device mmcblk0p1, logical block 3
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+sd-platform rts3903-sdhc: rtsx_icr_transfer_data error: -145: HDBAR = 03034400 -> 03034408, HDBCTLR = A0000000
+sd-platform rts3903-sdhc: rtsx_icr_transfer_data error: SDMAR = 02948000, SDMACTLR = a0001000
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD50(8): 00 00 00 00 00 04 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD58(8): 00 00 00 00 00 a9 03 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD60(8): aa 0f 00 e5 00 00 24 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD68(8): 04 02 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 08 00 0e 91 01 01 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF20(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF28(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF30(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF38(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF40(8): 2b 5a 0c 16 97 50 4d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF48(8): 02 08 03 01 01 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF50(8): 00 01 30 10 1b 01 00 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF58(8): 03 03 00 00 00 00 00 00
+sd-platform rts3903-sdhc: rtsx_icr_dump_dma_table error: ADMA table at 03034400: 02948000, 1000, 0023
+mmcblk0: error -159 sending status command, retrying
+mmcblk0: error -159 sending status command, retrying
+mmcblk0: error -159 sending status command, aborting
+mmc0: card 0007 removed
+[1;33mget_cluster_size(349) sector_size:0,sect_per_cluster:0[m
+checkdisk, main() ret_status(10002) 
+sh: write error: Device or resource busy
+32+0 records in
+32+0 records out
+32 bytes (32B) copied, 0.003403 seconds, 9.2KB/s
+high level enable
+numid=8,iface=MIXER,name='Master Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=127,127
+  | dBscale-min=-33.50dB,step=0.50dB,mute=0
+numid=1,iface=MIXER,name='Master Playback Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=109,109
+  | dBscale-min=-63.50dB,step=0.50dB,mute=0
+numid=11,iface=MIXER,name='Real Amic Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=69,step=0
+  : values=30,30
+  | dBscale-min=-6.00dB,step=0.75dB,mute=0
+---update file(home_r10m) Not exist---
+./init.sh: line 124: mDNSRespoderPosix: not found
+./init.sh: line 129: can't create /proc/sys/vm/extfrag_threshold: nonexistent directory
+./init.sh: line 130: can't create /proc/sys/vm/compact_memory: nonexistent directory
+hw_ver[32]=[21121113000000000000000000000000] 
+gpio_pin[32]=[32003002110022000000000000000000] 
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+insmod: can't insert '/home/app/localko/cpld_periph.ko': File exists
+moto not support !!! 
+/home/app # [1;33mmain(5473) sys_init ok[m
+04-19 11:57:27.436 watch_process.c:134|get_watch_info() process=dispatch;cmd=cd /home/app;./dispatch &;
+
+04-19 11:57:27.443 watch_process.c:134|get_watch_info() process=cloud;cmd=cd /home/app;./cloud &;
+
+04-19 11:57:27.443 watch_process.c:134|get_watch_info() process=rmm;cmd=reboot;
+
+04-19 11:57:27.443 watch_process.c:134|get_watch_info() process=p2p_tnp;cmd=cd /home/app;./p2p_tnp &;
+
+04-19 11:57:27.443 watch_process.c:134|get_watch_info() process=mp4record;cmd=cd /home/app;./mp4record &;
+
+04-19 11:57:27.464 watch_process.c:134|get_watch_info() process=arp_test;cmd=cd /home/app;./arp_test &;
+
+04-19 11:57:27.464 watch_process.c:134|get_watch_info() process=oss;cmd=cd /home/app;./oss &;
+
+04-19 11:57:27.502 oss.c:2882|main() oss stream = ./oss, venc chn = 0x400
+04-19 11:57:27.533 oss.c:2901|main() fshare_open ok
+04-19 11:57:27.547 dispatch.c:1210|get_config() got sn(UhieWIXxXbIx41mCPeawJfXbv12qjDq4)
+04-19 11:57:27.547 dispatch.c:1211|get_config() got pwd()
+04-19 11:57:27.547 dispatch.c:1212|get_config() got ssid()
+04-19 11:57:27.548 dispatch.c:1213|get_config() got tnp_init_string()
+hue, start_with_reset = 1 @get_config()->g_sysconf.ssid == 0 
+04-19 11:57:27.548 dispatch.c:1221|get_config() reset because no wifi config
+04-19 11:57:27.548 dispatch.c:962|save_config() got pwd()()
+04-19 11:57:27.548 dispatch.c:963|save_config() got ssid()()
+04-19 11:57:27.549 dispatch.c:964|save_config() config save finish 2
+04-19 11:57:27.549 dispatch.c:374|send_saveconfig_msg() send_saveconfig_msg msg snd success
+04-19 11:57:27.549 dispatch.c:1283|get_config() get_config save conf
+
+04-19 11:57:27.549 dispatch.c:4575|main() hw_type(2)
+
+rtscam:close device before detach camera
+rtscam:close device before detach camera
+sensor = SC2230rtscam:close device before detach camera
+
+===========
+
+choose isp_jin.fw============
+/bin/sh: /home/base/tools/hostapd.sh: not found
+
+/home/app # cd /tmp/sd
+/var/tmp/sd # ls -la
+drwxr-xr-x    2 root     root             0 Oct 24  2015 .
+drwxr-xr-x    3 root     root             0 Apr 19 11:57 ..
+-rw-r--r--    1 root     root          8981 Apr 19 11:57 log.txt
+-rw-r--r--    1 root     root           126 Apr 19 11:54 log_oss.txt
+/var/tmp/sd # mount /var/tmp/sd # ls -la[J/var/tmp/sd # cd /tmp/sd[J/var/tmp/sd # ./init.sh[J/var/tmp/sd # cd init.sh[J/var/tmp/sd # ls -la[J/var/tmp/sd # cd /home/app[J/var/tmp/sd # ifconfig eth0 netmask 255.255.255.0[J/var/tmp/sd # ifconfig eth0 10.98.7.199[J/var/tmp/sd # ls -la[J/var/tmp/sd # cd /tmp/sd[J/var/tmp/sd # mount /dev/mmcblk0p1 /tmp/sd[J/var/tmp/sd # ls -la[J/var/tmp/sd # mount /dev/mmcblk0p1 /tmp/sd[J
+mount: mounting /dev/mmcblk0p1 on /tmp/sd failed: No such file or directory
+/var/tmp/sd # fdisk
+/var/tmp/sd # /var/tmp/sd # fdisk[J -l
+
+Disk /dev/mtdblock0: 8 MB, 8388608 bytes
+255 heads, 63 sectors/track, 1 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock0 doesn't contain a valid partition table
+
+Disk /dev/mtdblock1: 0 MB, 196608 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock1 doesn't contain a valid partition table
+
+Disk /dev/mtdblock2: 1 MB, 1376256 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock2 doesn't contain a valid partition table
+
+Disk /dev/mtdblock3: 1 MB, 1835008 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock3 doesn't contain a valid partition table
+
+Disk /dev/mtdblock4: 3 MB, 3145728 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock4 doesn't contain a valid partition table
+
+Disk /dev/mtdblock5: 1 MB, 1703936 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock5 doesn't contain a valid partition table
+
+Disk /dev/mtdblock6: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock6 doesn't contain a valid partition table
+
+Disk /dev/mtdblock7: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock7 doesn't contain a valid partition table
+/var/tmp/sd # killall: mp4_record: no process killed
+
+/var/tmp/sd # 
+/var/tmp/sd # 
+/var/tmp/sd # ä     °√UPQ™LH≥]kRñ+K´ÈWÎíÎãÎRWíVV-+	í®H®hWñ.W-Î“´ñó´í……I®H®¯Linux version 3.10.27 (zhangzhidan@XY-201) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2521) ) #29 PREEMPT Wed May 22 14:16:12 CST 2019
+prom cpufreq = 500000000
+prom memsize = 67108864
+hw_ver: 0x2, hw_rev: 0x1, isp_ver: 0x1
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+FPU revision is: 01730001
+Determined physical RAM map:
+ memory: 04000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x420000(0x1a00000)
+Zone ranges:
+  Normal   [mem 0x00000000-0x03ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x03ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock3 rts_hconf.hconf_mtd_idx=1 rts-quadspi.channels=dual mtdparts=m25p80:8192k@0(global),192k@0k(boot),1344k@192k(kernel),1792k@1536k(rootfs),3072k@3328k(userdata),1664k@6400k(rootfs_backup),64k@8064k(vd1),64k@8128k(conf)
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 34084k/65536k available (3338k kernel code, 31452k reserved, 580k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:57
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+Init force reset registers
+rtsxb2 registered with IRQs
+INFO: initializing ISP memory ...
+INFO: initializing ISP device ...
+ISP camera platform devices added
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is ffffffff
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO: initializing pinctrl device ...
+pinctrl_platform rts3903-pinctrl: rtspc registered with IRQs
+INFO: initializing ethernet devices ...
+INFO: initializing USB phy ...
+INFO: initializing watchdog controller ...
+INFO: initializing crypto device ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts3903-dmac: DesignWare DMA Controller, 4 channels
+INFO: realtek DMA engine inited
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 512 (order: 0, 4096 bytes)
+TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+TCP: Hash tables configured (established 512 bind 512)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+msgmni has been set to 66
+NET: Registered protocol family 38
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+console [ttyS1] enabled, bootconsole disabled
+console [ttyS1] enabled, bootconsole disabled
+serial8250: ttyS1 at MMIO 0x18810100 (irq = 6) is a 16550A
+serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+dbg_iomem initialized!
+rts-quadspi rts3903-qspi: force to set channels from quad mode to dual mode
+rts-quadspi rts3903-qspi: request 60000000 Hz, force to set 41666666 Hz
+rts-quadspi rts3903-qspi: found w25q64fv, expected mx25l12835f
+rts-quadspi rts3903-qspi: w25q64fv (8192 Kbytes)
+8 cmdlinepart partitions found on MTD device m25p80
+Creating 8 MTD partitions on "m25p80":
+0x000000000000-0x000000800000 : "global"
+0x000000000000-0x000000030000 : "boot"
+0x000000030000-0x000000180000 : "kernel"
+0x000000180000-0x000000340000 : "rootfs"
+0x000000340000-0x000000640000 : "userdata"
+0x000000640000-0x0000007e0000 : "rootfs_backup"
+0x0000007e0000-0x0000007f0000 : "vd1"
+0x0000007f0000-0x000000800000 : "conf"
+rts-quadspi rts3903-qspi: Realtek QSPI Controller at 0x18030000 (irq 5)
+rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+rtl8168 rts3903-r8168 (unregistered net_device): Get invalid MAC address from flash!
+eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-rts: ehci-rts platform driver
+ehci-platform ehci-platform: EHCI Host Controller
+ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+ehci-platform ehci-platform: irq 11, io mem 0x18100000
+ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+usb usb1: SerialNumber: ehci-platform
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform ohci-platform: Generic Platform OHCI Controller
+ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+ohci-platform ohci-platform: irq 11, io mem 0x18180000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: Generic Platform OHCI Controller
+usb usb2: Manufacturer: Linux 3.10.27 ohci_hcd
+usb usb2: SerialNumber: ohci-platform
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ERROR: Unable to read RTP_REG_DC4_TRIM_OFFSET reg
+ERROR: Unable to read RTP_REG_CHIP_VERSION reg
+rtp_mfd 0-0030: pre_init() failed: -140
+rtp_mfd: probe of 0-0030 failed with error -140
+Stopped watchdog timer
+timer margin: 8 sec
+nf_conntrack version 0.5.0 (532 buckets, 2128 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP: cubic registered
+NET: Registered protocol family 17
+Key type dns_resolver registered
+mtd1 name is boot
+hconf init failed
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+Freeing unused kernel memory: 176K (803e4000 - 80410000)
+usb 1-1: new high-speed USB device number 2 using ehci-platform
+usb 1-1: New USB device found, idVendor=0bda, idProduct=f179
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1: Product: 802.11n
+usb 1-1: Manufacturer: Realtek
+usb 1-1: SerialNumber: 1CBFCE3094A8
+Sat Oct 24 10:24:00 UTC 2015
+ _           _         _            
+| |         | |       | |           
+| |     ___ | |__  ___| |_ ___ _ __ 
+| |    / _ \| '_ \/ __| __/ _ \ '__|
+| |___| (_) | |_) \__ \ ||  __/ |   
+|______\___/|_.__/|___/\__\___|_|   
+                                    
+                                    
+ubusd: can't load library 'libblobmsg_json.so'
+jffs2: notice: (235) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+home_mount_fail=0
+try /home/app/init.sh
+
+Please press Enter to activate this console. [0;32;32mStart [0;32;31m/home/app/init.sh...[m
+rlx snd internal codec init
+soc-audio soc-audio.0.auto: ASoC: machine RLX_INTERN_CARD should use snd_soc_register_card()
+soc-audio soc-audio.0.auto:  rlx-codec-digital <-> pcm-platform mapping ok
+soc-audio soc-audio.0.auto:  rlx-codec-analog <-> pcm-platform mapping ok
+usbcore: registered new interface driver rtl8188fu
+rtscam:isp resvd mem addr : 0x00520000, size : 0x1900000
+rtscam:rtscam_mem_init v:0xa0520000 p:0x00520000 s:0x00001900
+rtscam:rtscam_lock_init
+rtscam:rtscam_soc_probe
+rtscam:rtscam_hx280_probe
+rtscam:hx280enc:HW at base <0x18060000> with ID <0x48317011>
+rtscam:rtscam_jpgenc_probe
+rtscam:rtscam_osd2_probe
+rtscam:rtstream_init
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+cat: can't open '/sys/block/mmcblk0/device/cid': No such file or directory
+mmc0: new ultra high speed SDR50 SDHC card at address 0007
+mmcblk0: mmc0:0007 SD32G 28.9 GiB 
+ mmcblk0: p1
+10-24 10:24:03.956 checkdisk.c:106|get_tfcard_size_v2() TF card total size : 29664 MB
+
+10-24 10:24:03.958 checkdisk.c:290|get_fs_type() FS TYPE : VFAT
+
+[1;33mget_cluster_size(349) sector_size:512,sect_per_cluster:8[m
+10-24 10:24:04.002 checkdisk.c:355|get_cluster_size() cluster_size = 4096 Bytes
+
+10-24 10:24:04.002 checkdisk.c:504|main() FS cluster size is too little. cluster_size = 4096 
+checkdisk, main() ret_status(10002) 
+32+0 records in
+32+0 records out
+32 bytes (32B) copied, 0.004589 seconds, 6.8KB/s
+high level enable
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+numid=8,iface=MIXER,name='Master Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=127,127
+  | dBscale-min=-33.50dB,step=0.50dB,mute=0
+numid=1,iface=MIXER,name='Master Playback Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=109,109
+  | dBscale-min=-63.50dB,step=0.50dB,mute=0
+numid=11,iface=MIXER,name='Real Amic Capture Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=69,step=0
+  : values=30,30
+  | dBscale-min=-6.00dB,step=0.75dB,mute=0
+---update file(home_r10m) Not exist---
+./init.sh: line 124: mDNSRespoderPosix: not found
+./init.sh: line 129: can't create /proc/sys/vm/extfrag_threshold: nonexistent directory
+./init.sh: line 130: can't create /proc/sys/vm/compact_memory: nonexistent directory
+hw_ver[32]=[21121113000000000000000000000000] 
+gpio_pin[32]=[32003002110022000000000000000000] 
+hw  =[21121113000000000000000000000000] 
+gpio=[32003002110022000000000000000000] 
+[CPLD_PERIPH] CPLD_PERIPH module inited 
+moto not support !!! 
+Started watchdog timer
+Started watchdog timer
+
+[PID_LIST] pid_list_init ok, [ ver=May 27 2019, 16:21:04 ] 
+hue, start_with_reset = 1 @get_config()->g_sysconf.ssid == 0 
+10-24 10:24:07.526 dispatch.c:374|send_saveconfig_msg() send_saveconfig_msg msg snd success
+10-24 10:24:07.526 dispatch.c:1283|get_config() get_config save conf
+
+10-24 10:24:07.526 dispatch.c:4575|main() hw_type(2)
+
+rtscam:begin to load fw from isp.fw
+10-24 10:24:07.742 p2p_tnp.c:2055|p2p_set_tnp_init_status() p2p_set_tnp_init_status 1 send_msg ok!
+
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+[1;33mmain(5473) sys_init ok[m
+/bin/sh: /home/base/tools/hostapd.sh: not found
+rtscam:begin to load fw from isp.fw
+rtscam:Load firmware size : 131024.
+sensor = SC2230rtscam:begin to load fw from /home/lib/sc2230/isp_jin.fw
+
+===========
+rtscam:Load firmware size : 131024.
+rtscam:Found ISP 1.011 device
+rtscam:video device <rts3903-isp> registered
+rtscam:rts3903-isp initialized
+
+choose isp_jin.fw============
+rtl8168: eth0: link up
+16000 AECNS is free successfully 
+
+***** SMART BABYCRYING - V20160905.1 - *****
+  --- pmstat init_flt2ll[1] diff:108517 us, totalTm: 108517 us
+
+***** SMART BABYCRYING - V20160412.2 - *****
+ppmngr:0x5965b8, len:320000
+16000 AECNS is created sucessfully 
+
+
+
+~~~~~set pcm callback ok~~~~~
+
+
+raw_video_init 0
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+~ # fdisk -l
+
+Disk /dev/mtdblock0: 8 MB, 8388608 bytes
+255 heads, 63 sectors/track, 1 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock0 doesn't contain a valid partition table
+
+Disk /dev/mtdblock1: 0 MB, 196608 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock1 doesn't contain a valid partition table
+
+Disk /dev/mtdblock2: 1 MB, 1376256 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock2 doesn't contain a valid partition table
+
+Disk /dev/mtdblock3: 1 MB, 1835008 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock3 doesn't contain a valid partition table
+
+Disk /dev/mtdblock4: 3 MB, 3145728 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock4 doesn't contain a valid partition table
+
+Disk /dev/mtdblock5: 1 MB, 1703936 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock5 doesn't contain a valid partition table
+
+Disk /dev/mtdblock6: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock6 doesn't contain a valid partition table
+
+Disk /dev/mtdblock7: 0 MB, 65536 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Disk /dev/mtdblock7 doesn't contain a valid partition table
+
+Disk /dev/mmcblk0: 31.1 GB, 31104958464 bytes
+255 heads, 2 sectors/track, 119121 cylinders
+Units = cylinders of 510 * 512 = 261120 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1               5        7666     1953792   c Win95 FAT32 (LBA)
+~ # mount /dev/mmcbl[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+k0p1 /tmps[J/sd
+~ # cd /tmp/.sd[J[J[Jsd
+/var/tmp/sd # ls -la
+drwxr-xr-x    5 root     root          4096 Jan  1  1970 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+drwxr-xr-x    3 root     root          4096 Aug  9  2021 Yi
+-rwxr-xr-x    1 root     root             0 Aug  9  2021 invert_adc_rename_me
+drwxr-xr-x    2 root     root          4096 Aug  9  2021 lib
+-rwxr-xr-x    1 root     root        531968 Aug  9  2021 rRTSPServer
+-rwxr-xr-x    1 root     root         14713 Aug  9  2021 stream
+drwxr-xr-x    2 root     root          4096 Aug  9  2021 wifi
+-rwxr-xr-x    1 root     root           291 Aug  9  2021 wpa_supplicant_sample.conf
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+/var/tmp/sd # mkdir fs
+/var/tmp/sd # rT[JRTSPServer.rRTSPServer[11D/rRTSPServer[11D[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+/var/tmp/sd # mkdir fs[J[J[J[J[J[J[J[J[J./killall: mp4_record: no process killed
+stream
+./stream: can't load library 'librtsio.so.0'
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+./rRTSPServer
+./rRTSPServer: can't load library 'libstdc++.so.6'
+/var/tmp/sd # sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1d 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 4d 00 07 00 00 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 a8 91 80 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 requesting status
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 55 0x00070000 (-145, 0)
+end_request: I/O error, dev mmcblk0, sector 2049
+Buffer I/O error on device mmcblk0p1, logical block 1
+lost page write due to I/O error on mmcblk0p1
+
+/var/tmp/sd # ls -la
+drwxr-xr-x    6 root     root          4096 Apr 19 11:58 .
+drwxr-xr-x    3 root     root             0 Oct 24  2015 ..
+drwxr-xr-x    3 root     root          4096 Aug  9  2021 Yi
+drwxr-xr-x    2 root     root          4096 Apr 19 11:58 fs
+-rwxr-xr-x    1 root     root             0 Aug  9  2021 invert_adc_rename_me
+drwxr-xr-x    2 root     root          4096 Aug  9  2021 lib
+-rwxr-xr-x    1 root     root        531968 Aug  9  2021 rRTSPServer
+-rwxr-xr-x    1 root     root         14713 Aug  9  2021 stream
+drwxr-xr-x    2 root     root          4096 Aug  9  2021 wifi
+-rwxr-xr-x    1 root     root           291 Aug  9  2021 wpa_supplicant_sample.conf
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+
+/var/tmp/sd # mkdir d[Jfs
+mkdir: can't create directory 'fs': File exists
+/var/tmp/sd # [0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+ls -l[J[J[J[J[Jcp /*-/*R/* /*/* /tmp./[J[J/[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+sd/fs
+cp: can't create symlink '/tmp/sd/fs/backup/.fs_state': Operation not permitted
+^[[Akillall: mp4_record: no process killed
+
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+sd-platform rts3903-sdhc: rtsx_icr_transfer_data error: -145: HDBAR = 031E3400 -> 031E3408, HDBCTLR = A0000000
+sd-platform rts3903-sdhc: rtsx_icr_transfer_data error: SDMAR = 03a14200, SDMACTLR = a0000200
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD50(8): 00 00 00 00 00 04 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD58(8): 00 00 00 00 00 a9 03 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD60(8): aa 0f 00 e5 00 00 24 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFD68(8): 04 02 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 01 00 0e 91 01 01 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF20(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF28(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF30(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF38(8): 00 00 00 00 00 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF40(8): 2b 5a 0c 16 97 50 4d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF48(8): 02 08 03 01 01 00 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF50(8): 00 01 30 10 1b 01 00 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF58(8): 03 03 00 00 00 00 00 00
+sd-platform rts3903-sdhc: rtsx_icr_dump_dma_table error: ADMA table at 031E3400: 03a14200, 0200, 0023
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 17 0x00000801 (0, -145)
+mmcblk0: error -145 transferring data, sector 2049, nr 1, cmd response 0x0, card status 0x0
+end_request: I/O error, dev mmcblk0, sector 2049
+FAT-fs (mmcblk0p1): bread failed in fat_clusters_flush
+cp: can't create symlink '/tmp/sd/fs/bin/arping': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/ash': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/awk': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/basename': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/blkid': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/brctl': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/cat': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/chmod': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/chown': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/cp': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/crond': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/cut': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/date': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/dd': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/df': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/dhcprelay': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/dirname': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/dmesg': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/dnsdomainname': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/dumpleases': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/echo': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/egrep': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/expr': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/fdisk': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/fgrep': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/find': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/free': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/grep': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/halt': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/hd': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/hexdump': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/hostname': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/hwclock': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/id': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/ifconfig': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/init': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/insmod': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/kill': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/killall': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/killall5': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/klogd': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/less': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/linuxrc': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/ln': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/login': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/logread': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/ls': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/lsmod': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/md5sum': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/mdev': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/mkdir': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/mkdosfs': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/mkfs.vfat': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/mknod': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/mount': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/mv': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/pidof': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/ping': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/pivot_root': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/poweroff': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/ps': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/pwd': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/reboot': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/rm': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/rmdir': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/rmmod': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/route': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/sed': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/sh': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/sleep': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/sync': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/syslogd': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/tar': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/tftp': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/top': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/touch': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/tr': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/udhcpc': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/udhcpd': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/umount': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/vi': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/watchdog': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/wget': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/bin/which': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/video53': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/video51': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/video52': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/pid_list': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/cpld_periph': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mmcblk0': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mmcblk0p1': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/rtstream': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/rtsosd2': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/rtsjpgenc': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/rtshx280enc': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/rtscamctrl': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/rtscam': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/rtslock': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/rtsmem': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/controlC0': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/pcmC0D0c': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/pcmC0D0p': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/pcmC0D1p': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/pcmC0D1c': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/log': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/bus/usb/002/001': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/bus/usb/001/001': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/bus/usb/001/002': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/usb2': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/usb1': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/1-1': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/snd/controlC0': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/snd/pcmC0D0c': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/snd/pcmC0D0p': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/snd/pcmC0D1c': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/snd/pcmC0D1p': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/snd/timer': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/timer': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtdblock7': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtdblock6': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtdblock5': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtdblock4': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/dev/root': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtdblock3': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtdblock2': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtdblock1': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtdblock0': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/network_throughput': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/rfkill': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/watchdog': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/network_latency': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/cpu_dma_latency': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/ttyS2': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/ttyS1': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/ttyS0': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/ptmx': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/tty': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd7ro': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd6ro': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd5ro': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd4ro': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd3ro': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd2ro': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd1ro': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd0ro': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd7': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd6': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd5': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd4': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd3': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd2': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd1': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mtd0': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/urandom': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/random': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/zero': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/null': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/kmsg': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/full': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/mem': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/android_uvc': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/ram0': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/hconf': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/efuse': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/usb_phy_mdio': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/dbg_iomem': Operation not permitted
+cp: can't create '/tmp/sd/fs/dev/console': Operation not permitted
+cp: can't preserve permissions of '/tmp/sd/fs/dev/shm': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/etc/cron': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/etc/dnrd': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/etc/ppp': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/etc/resolv.conf': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/home/.fs_state': Operation not permitted
+cp: can't create symlink '/tmp/sd/fs/home/app/aacplay': Operation not permitted
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1d 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 4d 00 07 00 00 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 a8 91 80 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+cp: can't create symlink '/tmp/sd/fs/home/app/script': Operation not permitted
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 requesting status
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 55 0x00070000 (-145, 0)
+end_request: I/O error, dev mmcblk0, sector 19640
+Buffer I/O error on device mmcblk0p1, logical block 17592
+lost page write due to I/O error on mmcblk0p1
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 09 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 25 0x00005ed0 (-145, -145)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, retrying
+[0;32;31mmsg_proc(1418) 
+
+
+msg_head->mainOperation(0x1002)
+
+
+[m
+^C
+/var/tmp/sd # sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, retrying
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, aborting
+end_request: I/O error, dev mmcblk0, sector 24272
+Buffer I/O error on device mmcblk0p1, logical block 22224
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24273
+Buffer I/O error on device mmcblk0p1, logical block 22225
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24274
+Buffer I/O error on device mmcblk0p1, logical block 22226
+lost page write due to I/O error on mmcblk0p1
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+/var/tmp/sd # cp -R /* /tmp/sd/fs[Jsd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 09 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 25 0x00005f60 (-145, -145)
+
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+cp: can't create symlink '/tmp/sd/fs/backup/.fs_state': Operation not permitted
+mmcblk0: error -145 sending status command, retrying
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, retrying
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, aborting
+end_request: I/O error, dev mmcblk0, sector 24416
+Buffer I/O error on device mmcblk0p1, logical block 22368
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24417
+Buffer I/O error on device mmcblk0p1, logical block 22369
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24418
+Buffer I/O error on device mmcblk0p1, logical block 22370
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24419
+Buffer I/O error on device mmcblk0p1, logical block 22371
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24420
+Buffer I/O error on device mmcblk0p1, logical block 22372
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24421
+Buffer I/O error on device mmcblk0p1, logical block 22373
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24422
+Buffer I/O error on device mmcblk0p1, logical block 22374
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24423
+Buffer I/O error on device mmcblk0p1, logical block 22375
+lost page write due to I/O error on mmcblk0p1
+end_request: I/O error, dev mmcblk0, sector 24424
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 24 0x00005ef8 (0, -145)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, retrying
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, retrying
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, aborting
+^C
+/var/tmp/sd # sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 24 0x00005f00 (0, -145)
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, retrying
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, retrying
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+sd-platform rts3903-sdhc: sdmmc_request error: CMD 13 0x00070000 (-145, 0)
+mmcblk0: error -145 sending status command, aborting
+sd-platform rts3903-sdhc: rtsx_icr_wait_cmd error: -145: HCBAR = 031E3000, HCBCTLR = 8000003C
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF00(8): 19 01 00 08 00 1f 00 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF08(8): 00 ff ff ff ff ff 5d 00
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF10(8): 02 00 00 08 91 01 80 03
+sd-platform rts3903-sdhc: dump_reg_range error: 0xFF18(8): 00 01 00 00 00 00 00 54
+   
